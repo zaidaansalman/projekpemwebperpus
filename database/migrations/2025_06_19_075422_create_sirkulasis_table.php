@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('sirkulasis', function (Blueprint $table) {
             $table->id();
-            $table->unsighnedBigInteger('anggota_id');
+            $table->unsignedBigInteger('anggota_id');
             $table->foreign('anggota_id')->references('id')->on('anggotas')->onDelete('cascade');
-            $table->unsighnedBigInteger('buku_id');
+            $table->unsignedBigInteger('buku_id');
             $table->foreign('buku_id')->references('id')->on('books')->onDelete('cascade');
             $table->date('tgl_pinjam');
             $table->date('tgl_kembali');
