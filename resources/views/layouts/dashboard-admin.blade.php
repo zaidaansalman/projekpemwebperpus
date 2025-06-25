@@ -1,4 +1,5 @@
 @extends('app')
+@section('title', 'Dashboard Administrator')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
