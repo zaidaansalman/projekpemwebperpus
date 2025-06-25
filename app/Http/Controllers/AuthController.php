@@ -34,7 +34,8 @@ class AuthController extends Controller
         // Attempt to log the user in
         if (Auth::attempt($credentials)) {
             // Redirect to the dashboard on success
-            return redirect()->intended('/dashboard-admin');
+            return redirect()->intended('/dashboard-'.Auth::user()->role)
+                             ->with('success', 'Login successful!');
         }
 
         // Redirect back with an error message on failure

@@ -8,16 +8,20 @@ Route::get('/', function () {
 });
 
 // Login page
-Route::get('/login', function () {
-    return view('login');
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
 });
-
-Route::POST('/login', [AuthController::class, 'login']);
 
 // Dashboard page
 Route::get('/dashboard-admin', function () {
     return view('layouts.dashboard-admin');
-});
+})->middleware('admin');
+
+// Dashboard page
+Route::get('/dashboard-anggota', function () {
+    return view('layouts.dashboard-user');
+})->middleware('user');
 
 // Data buku
 Route::get('/data-buku', function () {

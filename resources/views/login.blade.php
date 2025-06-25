@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Login | SI Perpustakaan</title>
-	<link rel="icon" href="dist/img/logo.png">
+	<link rel="icon" href="{{ asset('dist/img/logo.png') }}">
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- Bootstrap 3.3.6 -->
@@ -37,7 +37,7 @@
 				<img src="{{ asset('dist/img/logo.png') }}" width=160px />
 			<br>
 			<p class="login-box-msg">Login System</p>
-			<form action="/login" method="post">
+			<form action="" method="post">
                 @csrf
 				<div class="form-group has-feedback">
 					<input type="email" class="form-control" name="email" placeholder="Email" required>
