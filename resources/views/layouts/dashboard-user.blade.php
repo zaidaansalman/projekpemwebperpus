@@ -287,37 +287,37 @@
     <section class="under-25">
         <h2  id="Non-Fiksi" alt="Nonfiksi" style="text-decoration: underline;">Non-Fiksi</h2>
         <div class="product-carousel">
-            <div class="product-item" onclick="showBookModal('30 Hari Jago Jualan', 'Dewa Eka Prayoga', 'Panduan praktis untuk meningkatkan penjualan dalam 30 hari.', '{{ asset('image/30 haei.png') }}', 5, 'https://drive.google.com/nonfiksi1')">
+            <div class="product-item" onclick="showBookModal('30 Hari Jago Jualan', 'Dewa Eka Prayoga', 'Panduan praktis untuk meningkatkan penjualan dalam 30 hari.', '{{ asset('image/30 haei.png') }}', 5, 'https://drive.google.com/file/d/1bkc0wts8Iay0-KijJQ4toCjhwTIQ5G5x/view')">
                 <img src="./image/30 haei.png" alt="30 Hari Jago Jualan">
                 <p style="font-size: medium;">30 Hari Jago Jualan</p>
                 <h3 style=" margin-top: 70px;">Dewa Eka Prayoga </h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('365 Tips Sehat ala Rasulullah', 'dr. Mohammad Ali Toha Assegaf', 'Tips kesehatan berdasarkan sunnah Rasulullah.', '{{ asset('image/365.png') }}', 5, 'https://drive.google.com/nonfiksi2')">
+            <div class="product-item" onclick="showBookModal('365 Tips Sehat ala Rasulullah', 'dr. Mohammad Ali Toha Assegaf', 'Tips kesehatan berdasarkan sunnah Rasulullah.', '{{ asset('image/365.png') }}', 5, 'https://drive.google.com/file/d/1Xl3RLtVcusQ-3G6HfzvT25nEy9Yj-LUn/view')">
                 <img src="./image/365.png" alt="365 Tips Sehat ala Rasulullah">
                 <p style="font-size: medium; ;">365 Tips Sehat ala Rasulullah</p>
                 <h3 style=" margin-top: 70px;"> dr. Mohammad Ali Toha Assegaf</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Pengantar Statistik', 'Hotniar Sorongoringo & Rachmat Agus Nursamsi', 'Buku pengantar statistik untuk pemula.', '{{ asset('image/statistik.png') }}', 5, 'https://drive.google.com/nonfiksi3')">
+            <div class="product-item" onclick="showBookModal('Pengantar Statistik', 'Hotniar Sorongoringo & Rachmat Agus Nursamsi', 'Buku pengantar statistik untuk pemula.', '{{ asset('image/statistik.png') }}', 5, 'https://drive.google.com/drive/folders/1SWeAMFIbAe_KWeRzzr1D9Tej65F2UlNK')">
                 <img src="./image/statistik.png" alt="Pengantar statistik">
                 <p style="font-size: medium;">Pengantar statistik</p>
                 <h3 style="margin-top: 50px;">Hotniar Sorongoringo & Rachmat Agus Nursamsi</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Think and Grow Rich', 'Napoleon Hill', 'Buku motivasi klasik tentang kesuksesan dan kekayaan.', '{{ asset('image/think.png') }}', 5, 'https://drive.google.com/nonfiksi4')">
+            <div class="product-item" onclick="showBookModal('Think and Grow Rich', 'Napoleon Hill', 'Buku motivasi klasik tentang kesuksesan dan kekayaan.', '{{ asset('image/think.png') }}', 5, 'https://drive.google.com/file/d/1_xRaV7mTgLVNAW-ziL_8Bbxrpm2Fk0qO/view')">
                 <img src="./image/think.png" alt="Think and Grow Rich">
                 <p style="font-size: medium;">Think and Grow Rich</p>
                 <h3 style=" margin-top: 60px;">Napoleon Hill</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Keajaiban Asmaul Husna', 'Ardi Gunawan', 'Mengenal keutamaan dan keajaiban Asmaul Husna.', '{{ asset('image/husna (1).png') }}', 5, 'https://drive.google.com/nonfiksi5')">
+            <div class="product-item" onclick="showBookModal('Keajaiban Asmaul Husna', 'Ardi Gunawan', 'Mengenal keutamaan dan keajaiban Asmaul Husna.', '{{ asset('image/husna (1).png') }}', 5, 'https://drive.google.com/drive/folders/1TpyMA5rxPg0Dvf36LGIwG1r3a-jzGxuY')">
                 <img src="./image/husna (1).png" alt="Keajaiban Asmaul Husna">
                 <p style="font-size: medium;">Keajaiban Asmaul Husna</p>
                 <h3 style=" margin-top: 45px;">Ardi Gunawan</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Keajaiban Istiqamah', 'Imam Sibawaih El Hasany', 'Kisah dan inspirasi tentang istiqamah dalam kehidupan.', '{{ asset('image/istiqamah.png') }}', 5, 'https://drive.google.com/nonfiksi6')">
+            <div class="product-item" onclick="showBookModal('Keajaiban Istiqamah', 'Imam Sibawaih El Hasany', 'Kisah dan inspirasi tentang istiqamah dalam kehidupan.', '{{ asset('image/istiqamah.png') }}', 5, 'https://drive.google.com/file/d/1Xg6a-ViYzDjVx6iyopUsQ9f4GlABgpxq/view')">
                 <img src="./image/istiqamah.png" alt="Keajaiban Istiqamah">
                 <p style="font-size: medium;">Keajaiban Istiqamah </p>
                 <h3 style="margin-top: 50px;">Imam Sibawaih El Hasany</h3>
@@ -558,8 +558,8 @@ footer {
   transition: background 0.15s, color 0.15s;
 }
 .suggestion-item:hover, .suggestion-item:focus {
-  background: #e0f7fa;
-  color: #23afac;
+  background: #23afac;
+  color: #fff;
 }
 .highlighted-book {
   outline: 3px solid #23afac;
