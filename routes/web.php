@@ -18,12 +18,10 @@ Route::middleware('guest')->group(function () {
 });
 
 // Logout route
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 // Dashboard page
-Route::get('/dashboard-admin', function () {
-    return view('layouts.dashboard-admin');
-})->middleware('admin');
+Route::get('/dashboard-admin', [App\Http\Controllers\AdminController::class, 'dashboard'])->middleware('admin');
 
 // Dashboard page
 Route::get('/dashboard-anggota', function () {
@@ -90,7 +88,8 @@ Route::get('/laporan-sirkulasi', function () {
 
 // Data Pengguna
 Route::get('/data-pengguna', function () {
-    return view('layouts.pengguna.data-pengguna');
+    $users = \App\Models\User::all();
+    return view('layouts.pengguna.data-pengguna', compact('users'));
 });
 
 // Tambah Pengguna
@@ -98,7 +97,14 @@ Route::get('/add-pengguna', function () {
     return view('layouts.pengguna.add-pengguna');
 });
 
+// Tambah Pengguna
+Route::post('/add-pengguna', [App\Http\Controllers\AdminController::class, 'storePengguna'])->name('pengguna.store');
+
 // Edit Pengguna
-Route::get('/edit-pengguna', function () {
-    return view('layouts.pengguna.edit-pengguna');
-});
+Route::get('/edit-pengguna/{id}', [App\Http\Controllers\AdminController::class, 'editPengguna'])->name('pengguna.edit');
+
+// Update Pengguna
+Route::post('/edit-pengguna/{id}', [App\Http\Controllers\AdminController::class, 'updatePengguna'])->name('pengguna.update');
+
+// Delete Pengguna
+Route::post('/delete-pengguna/{id}', [App\Http\Controllers\AdminController::class, 'deletePengguna'])->name('pengguna.delete');

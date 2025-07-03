@@ -18,7 +18,7 @@
 			<div class="small-box bg-blue">
 				<div class="inner">
 					<h4>
-						5
+						{{ $bukuCount ?? 0 }}
 					</h4>
 
 					<p>Buku</p>
@@ -26,7 +26,7 @@
 				<div class="icon">
 					<i class="ion ion-stats-bars"></i>
 				</div>
-				<a href="?page=MyApp/data_buku" class="small-box-footer">More info
+				<a href="/data-buku" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -37,7 +37,7 @@
 			<div class="small-box bg-yellow">
 				<div class="inner">
 					<h4>
-						5
+						{{ $anggotaCount ?? 0 }}
 					</h4>
 
 					<p>Anggota</p>
@@ -45,7 +45,7 @@
 				<div class="icon">
 					<i class="ion ion-person-add"></i>
 				</div>
-				<a href="?page=MyApp/data_agt" class="small-box-footer">More info
+				<a href="/data-agt" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -56,7 +56,7 @@
 			<div class="small-box bg-green">
 				<div class="inner">
 					<h4>
-						3
+						{{ $sirkulasiCount ?? 0 }}
 					</h4>
 
 					<p>Sirkulasi yang sedang berjalan</p>
@@ -64,7 +64,7 @@
 				<div class="icon">
 					<i class="ion ion-stats-bars"></i>
 				</div>
-				<a href="?page=data_sirkul" class="small-box-footer">More info
+				<a href="/data-sirkul" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -75,7 +75,7 @@
 			<div class="small-box bg-red">
 				<div class="inner">
 					<h4>
-						1
+						{{ $laporanCount ?? 0 }}
 					</h4>
 
 					<p>Laporan Sirkulasi</p>
@@ -83,9 +83,11 @@
 				<div class="icon">
 					<i class="ion ion-stats-bars"></i>
 				</div>
-				<a href="?page=log_kembali" class="small-box-footer">More info
+				<a href="/laporan-sirkulasi" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
 		</div>
+	</div>
+</section>
 @endsection

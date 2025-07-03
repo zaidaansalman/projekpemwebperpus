@@ -32,7 +32,7 @@
 							<th>Pengarang</th>
 							<th>Penerbit</th>
 							<th>Tahun</th>
-							<th>Nama Kategori</th>
+							<th>Kategori</th>
 							<th>Cover</th>
 							<th>Kelola</th>
 						</tr>
@@ -46,10 +46,10 @@
         <td>{{ $buku->pengarang }}</td>
         <td>{{ $buku->penerbit }}</td>
         <td>{{ $buku->th_terbit }}</td>
-        <td>{{ $buku->kategori ? $buku->kategori->nama_kategori : '-' }}</td>
+        <td>{{ $buku->kategori }}</td>
         <td>
             @if($buku->cover)
-                <img src="{{ asset('storage/covers/'.$buku->cover) }}" alt="cover" width="60">
+                <img src="{{ asset('storage/' . $buku->cover) }}" alt="cover" width="60">
             @else
                 -
             @endif

@@ -30,27 +30,32 @@
 							<th>No</th>
 							<th>Nama</th>
 							<th>Username</th>
+							<th>Email</th>
 							<th>Level</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
 					<tbody>
+						@foreach($users as $user)
 						<tr>
-							<td>1</td>
-							<td>Kamachi</td>
-							<td>kamachiw</td>
-							<td>Adminstrator</td>
+							<td>{{ $loop->iteration }}</td>
+							<td>{{ $user->name ?? $user->username }}</td>
+							<td>{{ $user->username ?? '-' }}</td>
+							<td>{{ $user->email ?? '-' }}</td>
+							<td>{{ $user->role ?? $user->level ?? '-' }}</td>
 							<td>
-								<a href="/edit-pengguna"
-								 title="Ubah" class="btn btn-success">
+								<a href="/edit-pengguna/{{ $user->id }}" title="Ubah" class="btn btn-success">
 									<i class="glyphicon glyphicon-edit"></i>
 								</a>
-								<a href=""
-								 onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus" class="btn btn-danger">
-									<i class="glyphicon glyphicon-trash"></i>
-									</>
+								<form action="/delete-pengguna/{{ $user->id }}" method="POST" style="display:inline;">
+									@csrf
+									<button type="submit" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus" class="btn btn-danger">
+										<i class="glyphicon glyphicon-trash"></i>
+									</button>
+								</form>
 							</td>
 						</tr>
+						@endforeach
 					</tbody>
 
 				</table>

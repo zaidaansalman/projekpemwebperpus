@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kategoris', function (Blueprint $table) {
-            $table->id();
-            $table->enum('nama_kategori', ['Fiksi', 'Nonfiksi']);
-            $table->timestamps();
+        Schema::table('sirkulasis', function (Blueprint $table) {
+            $table->date('tgl_dikembalikan')->nullable()->after('jatuh_tempo');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kategoris');
+        Schema::table('sirkulasis', function (Blueprint $table) {
+            $table->dropColumn('tgl_dikembalikan');
+        });
     }
 };

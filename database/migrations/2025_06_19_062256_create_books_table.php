@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->string('th_terbit');
+            $table->enum('kategori', ['Fiksi', 'Nonfiksi']);
             $table->timestamps();
         });
     }

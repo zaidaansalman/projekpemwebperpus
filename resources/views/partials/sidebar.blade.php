@@ -6,14 +6,14 @@
         </<b>
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+                <img src="dist/img/user.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>
-                    Kevin Anggora
+                    {{ Auth::user()->name ?? Auth::user()->username ?? 'Guest' }}
                 </p>
                 <span class="label label-warning">
-                    Administrator
+                    {{ Auth::user()->role ?? 'User' }}
                 </span>
             </div>
         </div>
@@ -26,8 +26,8 @@
 
             <!-- Level jika admin  -->
 
-                <li class="treeview">
-                    <a href="/dashboard">
+                <li class="treeview{{ request()->is('dashboard-admin') ? ' active' : '' }}">
+                    <a href="{{ url('/dashboard-admin') }}">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                         <span class="pull-right-container">
@@ -45,19 +45,21 @@
                     </a>
                     <ul class="treeview-menu">
 
-                        <li>
-                            <a href="/data-buku">
-                                <i class="fa fa-book"></i>Data Buku</a>
+                        <li class="treeview">
+                            <a href="{{ url('/data-buku') }}">
+                                <i class="fa fa-book"></i> <span>Data Buku</span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="data-agt">
-                                <i class="fa fa-users"></i>Data Anggota</a>
+                        <li class="treeview">
+                            <a href="{{ url('/data-agt') }}">
+                                <i class="fa fa-users"></i> <span>Data Anggota</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="data-sirkul">
+                    <a href="{{ url('/data-sirkul') }}">
                         <i class="fa fa-refresh"></i>
                         <span>Sirkulasi</span>
                         <span class="pull-right-container">
@@ -75,13 +77,15 @@
                     </a>
                     <ul class="treeview-menu">
 
-                        <li>
-                            <a href="log-pinjam">
-                                <i class="fa fa-arrow-circle-o-down"></i>Peminjaman</a>
+                        <li class="treeview">
+                            <a href="{{ url('/log-pinjam') }}">
+                                <i class="fa fa-arrow-circle-o-down"></i> <span>Peminjaman</span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="log-kembali">
-                                <i class="fa fa-arrow-circle-o-up"></i>Pengembalian</a>
+                        <li class="treeview">
+                            <a href="{{ url('/log-kembali') }}">
+                                <i class="fa fa-arrow-circle-o-up"></i> <span>Pengembalian</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -96,9 +100,10 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="laporan-sirkulasi">
-                                <i class="fa fa-file"></i>Laporan Sirkulasi</a>
+                        <li class="treeview">
+                            <a href="{{ url('/laporan-sirkulasi') }}">
+                                <i class="fa fa-file"></i> <span>Laporan Sirkulasi</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -106,7 +111,7 @@
                 <li class="header">SETTING</li>
 
                 <li class="treeview">
-                    <a href="data-pengguna">
+                    <a href="{{ url('/data-pengguna') }}">
                         <i class="fa fa-user"></i>
                         <span>Pengguna Sistem</span>
                         <span class="pull-right-container">
@@ -115,7 +120,7 @@
                 </li>
 
             <li>
-                <a href="logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">
+                <a href="/logout" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">
                     <i class="fa fa-sign-out"></i>
                     <span>Logout</span>
                     <span class="pull-right-container"></span>

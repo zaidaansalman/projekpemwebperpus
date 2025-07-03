@@ -32,11 +32,22 @@
 				</div>
 				<!-- /.box-header -->
 				<!-- form start -->
-				<form action="" method="post" enctype="multipart/form-data">
+				<form action="{{ url('/add-pengguna') }}" method="post" enctype="multipart/form-data">
+					@csrf
 					<div class="box-body">
+						@if ($errors->any())
+						    <div class="alert alert-danger">
+						        <ul>
+						            @foreach ($errors->all() as $error)
+						                <li>{{ $error }}</li>
+						            @endforeach
+						        </ul>
+						    </div>
+						@endif
+
 						<div class="form-group">
-							<label for="exampleInputEmail1">Nama Pengguna</label>
-							<input type="text" name="nama_pengguna" id="nama_pengguna" class="form-control" placeholder="Nama pengguna">
+							<label for="exampleInputEmail1">Email</label>
+							<input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
 						</div>
 
 						<div class="form-group">
@@ -51,10 +62,10 @@
 
 						<div class="form-group">
 							<label>Level</label>
-							<select name="level" id="level" class="form-control">
-								<option>-- Pilih Level --</option>
-								<option>Administrator</option>
-								<option>Petugas</option>
+							<select name="level" id="level" class="form-control" required>
+								<option value="">-- Pilih Level --</option>
+								<option value="Admin">Admin</option>
+								<option value="Anggota">Anggota</option>
 							</select>
 						</div>
 

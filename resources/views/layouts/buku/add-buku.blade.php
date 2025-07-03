@@ -1,9 +1,9 @@
 @extends('app')
 @section('content')
-<section class="content-header">
+<section class="content-header" style="margin-bottom: 20px;">
 	<ol class="breadcrumb">
 		<li>
-			<a href="index.php">
+			<a href="{{ url('/dashboard-admin') }}">
 				<i class="fa fa-home"></i>
 				<b>Si Perpustakaan</b>
 			</a>
@@ -50,13 +50,10 @@
 
 						<div class="form-group">
 							<label>Kategori</label>
-							<select name="kategori_id" class="form-control" required>
+							<select name="kategori" class="form-control" required>
 								<option value="">Pilih Kategori</option>
 								<option value="Fiksi">Fiksi</option>
 								<option value="Nonfiksi">Nonfiksi</option>
-								@foreach($kategoris as $kategori)
-									<option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
-								@endforeach
 							</select>
 						</div>
 

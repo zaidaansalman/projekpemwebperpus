@@ -16,12 +16,9 @@ class Buku extends Model
         'pengarang',
         'penerbit',
         'th_terbit',
-        'kategori_id',
+        'kategori', // use string kategori
         'cover',
     ];
 
-    public function kategori()
-    {
-        return $this->belongsTo(Kategori::class, 'kategori_id');
-    }
+    // No more kategori() relationship needed
 }

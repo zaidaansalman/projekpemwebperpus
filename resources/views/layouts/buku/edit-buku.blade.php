@@ -57,11 +57,10 @@
 
 						<div class="form-group">
 							<label>Kategori</label>
-							<select name="kategori_id" class="form-control" required>
+							<select name="kategori" class="form-control" required>
 								<option value="">Pilih Kategori</option>
-								@foreach($kategoris as $kategori)
-									<option value="{{ $kategori->id }}" {{ $buku->kategori_id == $kategori->id ? 'selected' : '' }}>{{ $kategori->nama_kategori }}</option>
-								@endforeach
+								<option value="Fiksi" {{ $buku->kategori == 'Fiksi' ? 'selected' : '' }}>Fiksi</option>
+								<option value="Nonfiksi" {{ $buku->kategori == 'Nonfiksi' ? 'selected' : '' }}>Nonfiksi</option>
 							</select>
 						</div>
 

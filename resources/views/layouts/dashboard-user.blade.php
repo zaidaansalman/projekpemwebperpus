@@ -15,7 +15,7 @@
         <header>
             <div class="navbar" id="Home">
                 <div class="logo">
-                    <img src="../P8_Landing Page Apotik/Image/logoo.jpg" alt="Logo">
+                    <img src="......" alt="Logo">
                 </div>
                 <nav id="mainNav" style="text-align: center;">
                 <ul>
@@ -24,7 +24,6 @@
                     <li><a href="#books">Koleksi</a></li>
                     <li><a href="#about">Tentang</a></li>
                     <li><a href="#contact">Kontak</a></li>
-                    <li><a href="#" class="cta-button" style="color: white;">Login</a></li>
                 </ul>
             </nav>
                 
@@ -33,21 +32,12 @@
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                             <button class="btn btn-outline-white" style="background-color: #23afac; color: white;" type="submit">Search</button>
                         </form>
+                         <a href="/logout" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">
+                    <i class="fa fa-sign-out"></i>
+                    <span>Logout</span>
                     </div>
-              
-             
-            
-            <div id="popup" class="popup">
-              <h2>Login</h2>
-              <form>
-                <i class="fa-solid fa-user"></i>  <input type="text" placeholder="Username"><br>
-                <i class="fa-solid fa-key"></i>  <input type="password" placeholder="Password"><br>
-                <button type="submit" ><a href="../P8_Landing Page Apotik/LP.html">Login</a></button>
-              </form> 
-            </div>
-          
-        
-
+                     <li>
+               
             </div>
           </header>
           
@@ -173,7 +163,7 @@
             </div>
             <div class="product-item">
                 <img src="./image/istiqamah.png" alt="Keajaiban Istiqamah">
-                <p style="font-size: medium;"">Keajaiban Istiqamah </p>
+                <p style="font-size: medium;">Keajaiban Istiqamah </p>
                 <h3 style="margin-top: 50px;">Imam Sibawaih El Hasany</h3>
                 <span>★★★★★</span>
             </div>
