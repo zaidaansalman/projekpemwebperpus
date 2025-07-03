@@ -101,37 +101,37 @@
         <section class="under-25" id="koleksi" style="margin-bottom: 80px;">
         <h2 id="Fiksi" alt="Fiksi">Fiksi</h2>
         <div class="product-carousel">
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Filosofi Teras', 'Henry Manampiring', 'Buku pengantar filsafat stoik, mengajarkan cara berpikir tenang dan rasional.', '{{ asset('image/teras.png') }}', 5, 'https://drive.google.com/example1')">
                 <img src="./image/teras.png" alt="Filosofi Teras">
                 <p style="font-size: medium;"> Filosofi Teras</p>
                 <h3 style="margin-top: 70px;"> Henry Manampiring </h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Nanti Juga Sembuh Sendiri', 'HeloBagas', 'Buku motivasi untuk menghadapi masalah hidup dengan sabar.', '{{ asset('image/Sembuh.png') }}', 5, 'https://drive.google.com/example2')">
                 <img src="./image/Sembuh.png" alt="Nanti Juga Sembuh Sendiri">
                 <p style="font-size: medium; ;">Nanti Juga Sembuh Sendiri</p>
                 <h3 style="margin-top: 20px;">HeloBagas</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Stop Overthiking', 'Nick Treton', 'Panduan mengatasi overthinking dan kecemasan.', '{{ asset('image/overthinking.png') }}', 5, 'https://drive.google.com/example3')">
                 <img src="./image/overthinking.png" alt="Stop Overthiking">
                 <p style="font-size: medium;">Stop Overthiking</p>
                 <h3 style="margin-top: 60px;">Nick Treton</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Berdamai Dengan Emosi', 'Asti Musman', 'Tips mengelola emosi dan kesehatan mental.', '{{ asset('image/Emosi.png') }}', 5, 'https://drive.google.com/example4')">
                 <img src="./image/Emosi.png" alt="Berdamai Dengan Emosi">
                 <p style="font-size: medium;">Berdamai Dengan Emosi</p>
                 <h3 style="margin-top: 50px;">Asti Musman</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', '{{ asset('image/memikat.png') }}', 5, 'https://drive.google.com/example5')">
                 <img src="./image/memikat.png" alt="Trik Memikat & Mempengaruhi Lawan Bicara">
                 <p style="font-size: medium;">Trik Memikat & Mempengaruhi Lawan Bicara</p>
                 <h3>Yoga Pratama</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Berani Tidak Disukai', 'Ichiro Kishimi & Fumitake Koga', 'Buku pengembangan diri tentang keberanian menjadi diri sendiri.', '{{ asset('image/Berani (1).png') }}', 5, 'https://drive.google.com/example6')">
                 <img src="./image/Berani (1).png" alt="Berani Tidak Disukai">
                 <p style="font-size: medium;">Berani Tidak Disukai </p>
                 <h3 style="margin-top: 40px;">Ichiro Kishimi & Fumitake Koga</h3>
@@ -140,6 +140,41 @@
             <p style="color:black; text-decoration: none;"><a href="./Fiksi.html">Selengkapnya</a></p>
         </div>
     </section>
+
+    <!-- Modal Pop Up -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookModalLabel">Judul Buku</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="bookModalCover" src="" alt="Cover Buku" style="max-width: 200px; margin-bottom: 20px;">
+            <h6 id="bookModalAuthor"></h6>
+            <div id="bookModalRating"></div>
+            <p id="bookModalDesc"></p>
+            <a id="bookModalDrive" href="#" target="_blank" class="btn btn-info mt-2">Lihat Buku (Drive)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showBookModal(title, author, desc, cover, rating, drive) {
+        document.getElementById('bookModalLabel').innerText = title;
+        document.getElementById('bookModalAuthor').innerText = 'Penulis: ' + author;
+        document.getElementById('bookModalDesc').innerText = desc;
+        document.getElementById('bookModalCover').src = cover;
+        document.getElementById('bookModalDrive').href = drive;
+        // Show rating as stars
+        let stars = '';
+        for (let i = 0; i < rating; i++) stars += '<i class="fa fa-star text-warning"></i>';
+        document.getElementById('bookModalRating').innerHTML = '<div>Rating: ' + stars + '</div>';
+        var myModal = new bootstrap.Modal(document.getElementById('bookModal'));
+        myModal.show();
+      }
+    </script>
 
     <section class="under-25">
         <h2  id="Non-Fiksi" alt="Nonfiksi">Non-Fiksi</h2>
