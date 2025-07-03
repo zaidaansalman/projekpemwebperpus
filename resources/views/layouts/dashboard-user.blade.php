@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plusplus Pharmacy</title>
+    <title>Halaman User</title>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -19,11 +19,11 @@
                 </div>
                 <nav id="mainNav" style="text-align: center;">
                 <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#features">Fitur</a></li>
-                    <li><a href="#books">Koleksi</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#koleksi">Koleksi</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
                 </ul>
             </nav>
                 
@@ -32,7 +32,7 @@
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                             <button class="btn btn-outline-white" style="background-color: #23afac; color: white;" type="submit">Search</button>
                         </form>
-                         <a href="/logout" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">
+                         <a href="/logout" onclick="return confirm('Anda yakin ingin keluar dari aplikasi ?')">
                     <i class="fa fa-sign-out"></i>
                     <span>Logout</span>
                     </div>
@@ -43,23 +43,18 @@
           
           <main>
             <section class="hero">
-              <div class="content">
+              <div id="beranda">
                 <h1 id="Apotek"><span>  NF </span> Library </h1>
                 <p style="text-align:center">Baca Buku Kesukaanmu Dimanapun Kapanpun!</p><br>
-              
               </div>
-              <div class="image">
+              <div id="image">
                 <img src="./image/perpus 3d.png"  alt="Pharmacist">
               </div>
             </section>
           </main>
-          <footer>
-           
-            </footer>
-
     
     <!-- Picks Section -->
-    <section class="picks">
+    <section class="picks" id="fitur">
         <h2>Pilih Topik yang Kamu Sukai!</h2>
         <div class="categories">
             <section class="categories" style="display: flex; align-items: center; justify-content: center; text-decoration: none;" >
@@ -70,8 +65,7 @@
                 <div class="category-item">
                     <img src="./image/fiksi.png" alt="Fiksi" style="width: 150px; height: 150px;">
                     <p style="text-align: center;"><a href="#Fiksi">Fiksi</a></p>
-                </div>
-                
+                </div> 
             </section>
 
 
@@ -85,7 +79,7 @@
   
 
              <!-- Under $25 Section -->
-    <section class="under-25" style="margin-bottom: 80px;">
+        <section class="under-25" id="koleksi" style="margin-bottom: 80px;">
         <h2 id="Fiksi" alt="Fiksi">Fiksi</h2>
         <div class="product-carousel">
             <div class="product-item">
@@ -173,7 +167,7 @@
     
 
     <!-- Promo Banners -->
-    <section class="promo-banners">
+    <section class="promo-banners" id="tentang">
         <div class="promo-item autumn-skincare">
             <img src="../P8_Landing Page Apotik/Image/Gratis Ongkir.jpg" alt="">
         </div>
@@ -189,7 +183,9 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+
+    <!-- Bagian Kontak  -->
+    <footer class="footer" id="kontak">
         <div class="footer-container">
             <div class="footer-column">
                 <div class="penulis">
