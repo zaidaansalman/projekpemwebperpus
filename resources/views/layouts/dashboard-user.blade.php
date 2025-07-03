@@ -48,12 +48,9 @@
                          </button>
                      </form>
 
-                     <form action="{{ route('logout') }}" method="POST" class="ms-3">
-                            @csrf
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin kleuar dari apliksi?')">
-                                <i class="fa fa-sign-out"></i> Logout
-                            </button>
-                        </form>
+                     <a href="{{ route('logout') }}" class="btn btn-danger ms-3" onclick="return confirm('Anda yakin kleuar dari apliksi?')">
+                        <i class="fa fa-sign-out"></i> Logout
+                    </a>
                     </div>
                
             </div>
