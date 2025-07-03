@@ -25,7 +25,8 @@
 				</div>
 				<!-- /.box-header -->
 				<!-- form start -->
-				<form action="" method="post" enctype="multipart/form-data">
+				<form action="{{ url('/edit-buku/'.$buku->id) }}" method="post">
+					@csrf
 					<div class="box-body">
 
 						<div class="form-group">
@@ -36,33 +37,40 @@
 
 						<div class="form-group">
 							<label>Judul Buku</label>
-							<input type='text' class="form-control" name="judul_buku" value="Komet"
-							/>
+							<input type="text" name="judul_buku" class="form-control" value="{{ $buku->judul_buku }}" required>
 						</div>
 
 						<div class="form-group">
 							<label>Pengarang</label>
-							<input type='text' class="form-control" name="pengarang" value="Andrea Hirata"
-							/>
+							<input type="text" name="pengarang" class="form-control" value="{{ $buku->pengarang }}" required>
 						</div>
 
 						<div class="form-group">
 							<label>Penerbit</label>
-							<input class="form-control" name="penerbit" value="Bentang Pustaka"
-							/>
+							<input type="text" name="penerbit" class="form-control" value="{{ $buku->penerbit }}" required>
 						</div>
 
 						<div class="form-group">
-							<label>Th Terbit</label>
-							<input class="form-control" name="th_terbit" value="2018">
+							<label>Tahun Terbit</label>
+							<input type="text" name="th_terbit" class="form-control" value="{{ $buku->th_terbit }}" required>
+						</div>
+
+						<div class="form-group">
+							<label>Kategori</label>
+							<select name="kategori_id" class="form-control" required>
+								<option value="">Pilih Kategori</option>
+								@foreach($kategoris as $kategori)
+									<option value="{{ $kategori->id }}" {{ $buku->kategori_id == $kategori->id ? 'selected' : '' }}>{{ $kategori->nama_kategori }}</option>
+								@endforeach
+							</select>
 						</div>
 
 					</div>
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
-						<a href="data-buku" class="btn btn-warning">Batal</a>
+						<button type="submit" class="btn btn-info">Update</button>
+						<a href="{{ url('/data-buku') }}" class="btn btn-warning">Batal</a>
 					</div>
 				</form>
 			</div>

@@ -17,6 +17,9 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [AuthController::class, 'register']);
 });
 
+// Logout route
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
 // Dashboard page
 Route::get('/dashboard-admin', function () {
     return view('layouts.dashboard-admin');
@@ -29,28 +32,30 @@ Route::get('/dashboard-anggota', function () {
 
 // Data buku
 Route::get('/data-buku', function () {
-    return view('layouts.buku.data-buku');
+    $bukus = \App\Models\Buku::all();
+    return view('layouts.buku.data-buku', compact('bukus'));
 });
 
 // Tambah buku
-Route::get('/add-buku', function () {
-    return view('layouts.buku.add-buku');
-});
+Route::get('/add-buku', [App\Http\Controllers\AdminController::class, 'showAddBuku']);
+Route::post('/add-buku', [App\Http\Controllers\AdminController::class, 'storeBuku'])->name('buku.store');
 
 // Edit buku
-Route::get('/edit-buku', function () {
-    return view('layouts.buku.edit-buku');
-});
+Route::get('/edit-buku/{id}', [App\Http\Controllers\AdminController::class, 'editBuku'])->name('buku.edit');
+Route::post('/edit-buku/{id}', [App\Http\Controllers\AdminController::class, 'updateBuku'])->name('buku.update');
+
+// Delete buku
+Route::post('/delete-buku/{id}', [App\Http\Controllers\AdminController::class, 'deleteBuku'])->name('buku.delete');
 
 // Data anggota
 Route::get('/data-agt', function () {
-    return view('layouts.agt.data-agt');
+    $anggotas = \App\Models\Anggota::all();
+    return view('layouts.agt.data-agt', compact('anggotas'));
 });
 
 // Tambah anggota
-Route::get('/add-agt', function () {
-    return view('layouts.agt.add-agt');
-});
+Route::get('/add-agt', [App\Http\Controllers\AdminController::class, 'showAddAgt']);
+Route::post('/add-agt', [App\Http\Controllers\AdminController::class, 'storeAgt'])->name('agt.store');
 
 // Edit anggota
 Route::get('/edit-agt', function () {
@@ -59,7 +64,8 @@ Route::get('/edit-agt', function () {
 
 // Data Sirkulasi
 Route::get('/data-sirkul', function () {
-    return view('layouts.sirkul.data-sirkul');
+    $sirkuls = \App\Models\Sirkulasi::with(['buku', 'anggota'])->get();
+    return view('layouts.sirkul.data-sirkul', compact('sirkuls'));
 });
 
 // Tambah Sirkulasi

@@ -38,41 +38,32 @@
 						</tr>
 					</thead>
 					<tbody>
-							<tr>
-								<td>
-									1
-								</td>
-								<td>
-									S001
-								</td>
-								<td>
-									B001
-								</td>
-								<td>
-									A001
-									-
-									Jamal Ghitani
-								</td>
-								<td>
-									2020-01-01
-								</td>
-								<td>
-									2020-01-08
-								</td>
-								<td>
-									<span class="label label-primary">Masa Peminjaman</span>
-								</td>
-
-							<td>
-								<a href="" onclick="return confirm('Perpanjang Data Ini ?')" title="Perpanjang" class="btn btn-success">
-									<i class="glyphicon glyphicon-upload"></i>
-								</a>
-								<a href="" onclick="return confirm('Kembalikan Buku Ini ?')" title="Kembalikan" class="btn btn-danger">
-									<i class="glyphicon glyphicon-download"></i>
-								</a>
-							</td>
-						</tr>
-					</tbody>
+    @foreach($sirkuls as $no => $sirkul)
+    <tr>
+        <td>{{ $no+1 }}</td>
+        <td>{{ $sirkul->id }}</td>
+        <td>{{ $sirkul->buku ? $sirkul->buku->judul_buku : '-' }}</td>
+        <td>{{ $sirkul->anggota ? $sirkul->anggota->id . ' - ' . $sirkul->anggota->nama : '-' }}</td>
+        <td>{{ $sirkul->tgl_pinjam }}</td>
+        <td>{{ $sirkul->jatuh_tempo }}</td>
+        <td>
+            @if($sirkul->denda > 0)
+                Rp {{ number_format($sirkul->denda, 0, ',', '.') }}
+            @else
+                <span class="label label-primary">Masa Peminjaman</span>
+            @endif
+        </td>
+        <td>
+            <a href="" onclick="return confirm('Perpanjang Data Ini ?')" title="Perpanjang" class="btn btn-success">
+                <i class="glyphicon glyphicon-upload"></i>
+            </a>
+            <a href="" onclick="return confirm('Kembalikan Buku Ini ?')" title="Kembalikan" class="btn btn-danger">
+                <i class="glyphicon glyphicon-download"></i>
+            </a>
+        </td>
+    </tr>
+    @endforeach
+</tbody>
 
 				</table>
 			</div>

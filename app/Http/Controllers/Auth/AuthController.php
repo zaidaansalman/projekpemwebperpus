@@ -44,7 +44,7 @@ class AuthController extends Controller
         // Attempt to log the user in
         if (Auth::attempt($credentials)) {
             // Redirect to the dashboard on success
-            return redirect()->intended('/dashboard-'.Auth::user()->role)
+            return redirect()->intended('/dashboard-'.strtolower(Auth::user()->role))
                              ->with('success', 'Login successful!');
         }
 
@@ -75,5 +75,14 @@ class AuthController extends Controller
 
         // Redirect to the dashboard
         return redirect('/dashboard-anggota')->with('success', 'Registration successful!');
+    }
+    
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

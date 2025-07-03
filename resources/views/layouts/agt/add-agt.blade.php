@@ -25,44 +25,36 @@
 				</div>
 				<!-- /.box-header -->
 				<!-- form start -->
-				<form action="" method="post" enctype="multipart/form-data">
+				<form action="{{ url('/add-agt') }}" method="post" enctype="multipart/form-data">
+					@csrf
 					<div class="box-body">
 						<div class="form-group">
-							<label>ID anggota</label>
-							<input type="text" name="id_anggota" id="id_anggota" class="form-control" value="A001"
-							 readonly/>
-						</div>
-
-						<div class="form-group">
 							<label>Nama Anggota</label>
-							<input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Anggota">
+							<input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Anggota"
+							 required>
 						</div>
-
 						<div class="form-group">
 							<label>Jenis Kelamin</label>
-							<select name="jekel" id="jekel" class="form-control" required>
-								<option>-- Pilih --</option>
-								<option>Laki-laki</option>
-								<option>Perempuan</option>
+							<select name="jekel" class="form-control" required>
+								<option value="">Pilih Jenis Kelamin</option>
+								<option value="Laki-laki">Laki-laki</option>
+								<option value="Perempuan">Perempuan</option>
 							</select>
 						</div>
-
 						<div class="form-group">
 							<label>Kelas</label>
-							<input type="text" name="kelas" id="kelas" class="form-control" placeholder="Kelas">
+							<input type="text" name="kelas" class="form-control" placeholder="Kelas" required>
 						</div>
-
 						<div class="form-group">
 							<label>No HP</label>
-							<input type="number" name="no_hp" id="no_hp" class="form-control" placeholder="No HP">
+							<input type="text" name="no_hp" class="form-control" placeholder="No HP" required>
 						</div>
-
 					</div>
 					<!-- /.box-body -->
 
 					<div class="box-footer">
 						<input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-						<a href="data-agt" class="btn btn-warning">Batal</a>
+						<a href="{{ url('/data-agt') }}" class="btn btn-warning">Batal</a>
 					</div>
 				</form>
 			</div>

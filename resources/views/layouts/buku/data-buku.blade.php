@@ -32,28 +32,42 @@
 							<th>Pengarang</th>
 							<th>Penerbit</th>
 							<th>Tahun</th>
+							<th>Nama Kategori</th>
+							<th>Cover</th>
 							<th>Kelola</th>
 						</tr>
 					</thead>
 					<tbody>
-							<td>1</td>
-							<td>B001</td>
-							<td>Komet</td>
-							<td>Andrea Hirata</td>
-							<td>Bentang Pustaka</td>
-							<td>2018</td>
-							<td>
-								<a href="edit-buku" title="Ubah"
-								 class="btn btn-success">
-									<i class="glyphicon glyphicon-edit"></i>
-								</a>
-								<a href="del_buku" onclick="return confirm('Yakin Hapus Data Ini ?')"
-								 title="Hapus" class="btn btn-danger">
-									<i class="glyphicon glyphicon-trash"></i>
-								</a>
-							</td>
-						</tr>
-					</tbody>
+    @foreach($bukus as $no => $buku)
+    <tr>
+        <td>{{ $no+1 }}</td>
+        <td>{{ $buku->id }}</td>
+        <td>{{ $buku->judul_buku }}</td>
+        <td>{{ $buku->pengarang }}</td>
+        <td>{{ $buku->penerbit }}</td>
+        <td>{{ $buku->th_terbit }}</td>
+        <td>{{ $buku->kategori ? $buku->kategori->nama_kategori : '-' }}</td>
+        <td>
+            @if($buku->cover)
+                <img src="{{ asset('storage/covers/'.$buku->cover) }}" alt="cover" width="60">
+            @else
+                -
+            @endif
+        </td>
+        <td>
+            <a href="{{ url('/edit-buku/'.$buku->id) }}" title="Ubah" class="btn btn-success">
+                <i class="glyphicon glyphicon-edit"></i>
+            </a>
+            <form action="{{ url('/delete-buku/'.$buku->id) }}" method="POST" style="display:inline;">
+                @csrf
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data Ini ?')">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+            </form>
+        </td>
+    </tr>
+    @endforeach
+</tbody>
 				</table>
 			</div>
 		</div>

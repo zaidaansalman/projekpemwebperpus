@@ -38,45 +38,32 @@
 						</tr>
 					</thead>
 					<tbody>
+						@foreach($anggotas as $no => $agt)
 						<tr>
+							<td>{{ $no+1 }}</td>
+							<td>{{ $agt->id }}</td>
+							<td>{{ $agt->nama }}</td>
+							<td>{{ $agt->jekel }}</td>
+							<td>{{ $agt->kelas }}</td>
+							<td>{{ $agt->no_hp }}</td>
 							<td>
-								1
-							</td>
-							<td>
-								A001
-							</td>
-							<td>
-								Rijal Muzakki
-							</td>
-							<td>
-								Laki-laki
-							</td>
-							<td>
-								demak
-							</td>
-							<td>
-								089987789000
-							</td>
-
-							<td>
-								<a href="edit-agt" title="Ubah Data"
-								 class="btn btn-success">
+								<a href="edit-agt/{{ $agt->id }}" title="Ubah Data" class="btn btn-success">
 									<i class="glyphicon glyphicon-edit"></i>
 								</a>
-
-								<a href="" onclick="return confirm('Yakin Hapus Data Ini ?')"
-								 title="Hapus" class="btn btn-danger">
-									<i class="glyphicon glyphicon-trash"></i>
-				 				 </a>
-
-								<a href="" title="print"
-								 target="_blank">
-								  <button class="btn btn-primary">
-									<i class="fa fa-print"></i>
-								  </button>
+								<form action="{{ url('/delete-agt/'.$agt->id) }}" method="POST" style="display:inline;">
+									@csrf
+									<button type="submit" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data Ini ?')">
+										<i class="glyphicon glyphicon-trash"></i>
+									</button>
+								</form>
+								<a href="print-agt/{{ $agt->id }}" title="print" target="_blank">
+									<button class="btn btn-primary">
+										<i class="fa fa-print"></i>
+									</button>
 								</a>
 							</td>
 						</tr>
+						@endforeach
 					</tbody>
 
 				</table>
