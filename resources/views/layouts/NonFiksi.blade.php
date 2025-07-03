@@ -98,73 +98,73 @@
                 <h2 id="NonFiksi" alt="NonFiksi" class="mb-0 text-center position-absolute top-50 start-50 translate-middle-x" style="left:50%;transform:translate(-50%,-50%);width:max-content;">Koleksi Buku Non Fiksi</h2>
             </div>
             <div class="product-carousel">
-                <div class="product-item" onclick="showBookModal('30 Hari Jago Jualan', 'Dewa Eka Prayoga', 'Panduan praktis meningkatkan penjualan dalam 30 hari.', './image/30 haei.png', 5, 'https://drive.google.com/nonfiksi1')">
+                <div class="product-item" onclick="showBookModal('30 Hari Jago Jualan', 'Dewa Eka Prayoga', 'Buku ini berisi rahasia jualan laris tanpa harus mengemis-ngemis.', './image/30 haei.png', 5, 'https://drive.google.com/file/d/1bkc0wts8Iay0-KijJQ4toCjhwTIQ5G5x/view')">
                     <img src="./image/30 haei.png" alt="30 Hari Jago Jualan">
                     <p><a href="#">30 Hari Jago Jualan</a></p>
                     <h3>Dewa Eka Prayoga</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('365 Tips Sehat ala Rasulullah', 'dr. Mohammad Ali Toha Assegaf', 'Tips kesehatan berdasarkan sunnah Rasulullah.', './image/365.png', 5, 'https://drive.google.com/nonfiksi2')">
+                <div class="product-item" onclick="showBookModal('365 Tips Sehat ala Rasulullah', 'dr. Mohammad Ali Toha Assegaf', ' Buku ini membahas tentang upaya memelihara kesehatan secara Islami yang sederhana dan mudah diamalkan, namun menghendaki kebersihan fisik dan mental, serta merupakan bagian tak terpisahkan dalam totalitas kehidupan sehari-hari seorang Muslim.', './image/365.png', 5, 'https://drive.google.com/file/d/1Xl3RLtVcusQ-3G6HfzvT25nEy9Yj-LUn/view')">
                     <img src="./image/365.png" alt="365 Tips Sehat ala Rasulullah">
                     <p>365 Tips Sehat ala Rasulullah</p>
                     <h3>dr. Mohammad Ali Toha Assegaf</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Pengantar Statistik', 'Hotniar Sorongoringo & Rachmat Agus Nursamsi', 'Dasar-dasar statistik untuk pemula.', './image/statistik.png', 5, 'https://drive.google.com/nonfiksi3')">
+                <div class="product-item" onclick="showBookModal('Pengantar Statistik', 'Hotniar Sorongoringo & Rachmat Agus Nursamsi', 'Dasar-dasar statistik untuk pemula.', './image/statistik.png', 5, 'https://drive.google.com/drive/folders/1SWeAMFIbAe_KWeRzzr1D9Tej65F2UlNK')">
                     <img src="./image/statistik.png" alt="Pengantar statistik">
                     <p>Pengantar Statistik</p>
                     <h3>Hotniar Sorongoringo & Rachmat Agus Nursamsi</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Think and Grow Rich', 'Napoleon Hill', 'Buku motivasi klasik tentang kesuksesan dan kekayaan.', './image/think.png', 5, 'https://drive.google.com/nonfiksi4')">
+                <div class="product-item" onclick="showBookModal('Think and Grow Rich', 'Napoleon Hill', ' Buku legendaris ini adalah buku terlaris sepanjang masa yang telah terjual lebih dari 15 juta eksemplar di seluruh dunia.', './image/think.png', 5, 'https://drive.google.com/file/d/1_xRaV7mTgLVNAW-ziL_8Bbxrpm2Fk0qO/view')">
                     <img src="./image/think.png" alt="Think and Grow Rich">
                     <p>Think and Grow Rich</p>
                     <h3>Napoleon Hill</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', './image/memikat.png', 5, 'https://drive.google.com/nonfiksi5')">
+                <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', './image/memikat.png', 5, 'https://drive.google.com/drive/folders/1TolEIK-TMyINaOximUnGTX1-8tMs7z_3')">
                     <img src="./image/memikat.png" alt="Trik Memikat & Mempengaruhi Lawan Bicara">
                     <p>Trik Memikat & Mempengaruhi Lawan Bicara</p>
                     <h3>Yoga Pratama</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Keajaiban Istiqamah', 'Imam Sibawaih El Hasany', 'Kisah dan motivasi untuk istiqamah dalam hidup.', './image/istiqamah.png', 5, 'https://drive.google.com/nonfiksi6')">
+                <div class="product-item" onclick="showBookModal('Keajaiban Istiqamah', 'Imam Sibawaih El Hasany', ' Istiqamah adalah anugerah dari Yang Mahaawal dan Mahaakhir, serta proses berkesinambungan bagi seorang Salik untuk terus berada di jalan lurus.', './image/istiqamah.png', 5, 'https://drive.google.com/file/d/1Xg6a-ViYzDjVx6iyopUsQ9f4GlABgpxq/view')">
                     <img src="./image/istiqamah.png" alt="Keajaiban Istiqamah">
                     <p>Keajaiban Istiqamah</p>
                     <h3>Imam Sibawaih El Hasany</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Dasar Dasar Rekayasa Transportasi', 'C. Jotin Khisty & B Kent Lall', 'Dasar-dasar rekayasa transportasi untuk mahasiswa teknik.', './image/dasar.png', 5, 'https://drive.google.com/nonfiksi7')">
+                <div class="product-item" onclick="showBookModal('Dasar Dasar Rekayasa Transportasi', 'C. Jotin Khisty & B Kent Lall', 'Dasar-dasar rekayasa transportasi untuk mahasiswa teknik.', './image/dasar.png', 5, 'https://drive.google.com/drive/folders/1SWeAMFIbAe_KWeRzzr1D9Tej65F2UlNK')">
                     <img src="./image/dasar.png" alt="Dasar Dasar Rekayasa Transportasi">
                     <p>Dasar Dasar Rekayasa Transportasi</p>
                     <h3>C. Jotin Khisty & B Kent Lall</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Buku Putih Tiktok Affiliate', 'Suwandi Baskara', 'Strategi sukses menjadi affiliate di TikTok.', './image/tiktok.png', 5, 'https://drive.google.com/nonfiksi8')">
+                <div class="product-item" onclick="showBookModal('Buku Putih Tiktok Affiliate', 'Suwandi Baskara', ' Buku ini berisi panduan mengenai TikTok Affiliate.', './image/tiktok.png', 5, 'https://drive.google.com/file/d/1bhZl7MFPlUX2ZEhs27w_h2LvnS9Gb81o/view')">
                     <img src="./image/tiktok.png" alt="Buku Putih Tiktok Affiliate">
                     <p>Buku Putih Tiktok Affiliate</p>
                     <h3>Suwandi Baskara</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('10 juta Pertama dari Menulis', 'Indari Mastuti', 'Cara menghasilkan uang dari menulis.', './image/10.png', 5, 'https://drive.google.com/nonfiksi9')">
+                <div class="product-item" onclick="showBookModal('10 juta Pertama dari Menulis', 'Indari Mastuti', 'Cara menghasilkan uang dari menulis.', './image/10.png', 5, 'https://drive.google.com/file/d/1eB_OEn88UwbxPjZh6LFSiDQnZmMmG5Wh/view')">
                     <img src="./image/10.png" alt="10 juta Pertama dari Menulis">
                     <p>10 juta Pertama dari Menulis</p>
                     <h3>Indari Mastuti</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Instrumentasi & Alat Ukur', 'Poerwanti, Juliza Hidayanti, & Anizar', 'Buku referensi tentang instrumentasi dan alat ukur.', './image/inst.png', 5, 'https://drive.google.com/nonfiksi10')">
+                <div class="product-item" onclick="showBookModal('Instrumentasi & Alat Ukur', 'Poerwanti, Juliza Hidayanti, & Anizar', 'Buku ini membahas tentang instrumentasi dan alat ukur yang mungkin relevan dengan bidang teknik, meskipun detail sinopsis tidak tersedia.', './image/inst.png', 5, 'https://drive.google.com/file/d/1kTbO2bpMuDnwMGO1uuBxtuUaFBaCUVj5/view')">
                     <img src="./image/inst.png" alt="Instrumentasi & Alat Ukur">
                     <p>Instrumentasi & Alat Ukur</p>
                     <h3>Poerwanti, Juliza Hidayanti, & Anizar</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Instrumentasi & Alat Ukur', 'E.M Wilson', 'Pembahasan lanjutan tentang instrumentasi dan alat ukur.', './image/hidrologi.png', 5, 'https://drive.google.com/nonfiksi11')">
-                    <img src="./image/hidrologi.png" alt="Instrumentasi & Alat Ukur">
-                    <p>Instrumentasi & Alat Ukur</p>
+                <div class="product-item" onclick="showBookModal('Hidrologi Teknik', 'E.M Wilson', 'Meskipun sinopsis spesifik tidak tersedia, judul menunjukkan bahwa buku ini membahas tentang hidrologi dari sudut pandang teknik.', './image/hidrologi.png', 5, 'https://drive.google.com/drive/folders/1SWeAMFIbAe_KWeRzzr1D9Tej65F2UlNK')">
+                    <img src="./image/hidrologi.png" alt="Hidrologi Teknik">
+                    <p>Hidrologi Teknik</p>
                     <h3>E.M Wilson</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Pengantar Teknik Fondasi', 'Ir. Rudy Gunawan', 'Dasar-dasar teknik fondasi untuk teknik sipil.', './image/fondasi.png', 5, 'https://drive.google.com/nonfiksi12')">
+                <div class="product-item" onclick="showBookModal('Pengantar Teknik Fondasi', 'Ir. Rudy Gunawan', 'Dasar-dasar teknik fondasi untuk teknik sipil.', './image/fondasi.png', 5, 'https://drive.google.com/drive/folders/1SWeAMFIbAe_KWeRzzr1D9Tej65F2UlNK')">
                     <img src="./image/fondasi.png" alt="Pengantar Teknik Fondasi">
                     <p>Pengantar Teknik Fondasi</p>
                     <h3>Ir. Rudy Gunawan</h3>
