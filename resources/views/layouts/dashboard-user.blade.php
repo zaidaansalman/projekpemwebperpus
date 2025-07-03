@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman User</title>
+    <link rel="icon" href="{{ asset('image/logo.png') }}" type="image/png">
+    <title>Landing Page</title>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -59,11 +60,12 @@
           <main>
             <section class="hero" id="beranda">
               <div id="beranda">
-                <h1 id="Apotek"><span  style="text-decoration: underline">NF Library</span> </h1>
-                <p style="text-align:center; text-decoration: underline">Baca Buku Kesukaanmu Dimanapun dan Kapanpun!</p><br>
+                <h1 id="Apotek" style="margin-left:24px;"><span style="text-decoration: underline">NF Library</span></h1>
+                <p class="hero-subtitle" style="margin-left:55px; padding-left:0; text-align:left; text-decoration:none; font-weight:400; color:#fff;">Baca Buku Kesukaanmu Dimanapun dan Kapanpun!</p>
+                <br>
               </div>
-              <div id="image">
-                <img src="./image/perpus 3d.png"  alt="Pharmacist">
+              <div id="image" class="animated-hero-image">
+                <img src="./image/perpus 3d.png" alt="Pharmacist" class="hero-img-animate">
               </div>
             </section>
           </main>
@@ -71,24 +73,25 @@
     <!-- Picks Section -->
     <section class="picks" id="fitur">
         <h2>Pilih Topik yang Kamu Sukai!</h2>
-        <div class="categories">
+        <div class="categories animated-categories">
             <section class="categories" style="display: flex; align-items: center; justify-content: center; text-decoration: none;" >
-                <div class="category-item">
+                <div class="category-item animated-category">
                     <img src="./image/non fiksi.png" alt="Non fiksi" style="width: 150px; height: 150px; ">
                     <p style="text-align: center; text-decoration: none;"><a href="#Non-Fiksi">Non-Fiksi</a></p>
                 </div>
-                <div class="category-item">
+                <div class="category-item animated-category">
                     <img src="./image/fiksi.png" alt="Fiksi" style="width: 150px; height: 150px;">
                     <p style="text-align: center;"><a href="#Fiksi">Fiksi</a></p>
                 </div> 
             </section>
+        </div>
 
 
             
             <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
                 <h2 style="text-align:left; font-weight:bold; text-decoration:underline;">NF Library </h2><br>
                 <blockquote style="text-align: left; font-size: 20px; font-weight: 400; line-height: 1.5; color: #333; font-family: 'Arial', sans-serif;">
-                NF Library adalah sebuah platform perpustakaan digital modern yang dirancang untuk memberikan kemudahan akses terhadap koleksi buku dan informasi literasi secara online. Website ini dikembangkan dengan tujuan utama untuk mendukung budaya membaca di kalangan pelajar, mahasiswa, dan masyarakat umum dengan pendekatan teknologi yang ramah pengguna. Melalui antarmuka yang sederhana namun elegan, pengguna dapat menjelajahi berbagai fitur seperti pencarian buku, melihat daftar koleksi terbaru, mengetahui informasi peminjaman, serta mendapatkan profil singkat dari setiap buku yang tersedia. NF Library juga menyediakan menu navigasi lengkap seperti Beranda, Fitur, Koleksi, Tentang, dan Kontak, yang semuanya disusun dalam satu halaman landing page yang responsif dan mudah digunakan baik di desktop maupun perangkat mobile. Dengan desain antarmuka yang dinamis dan navigasi yang mulus, pengguna dapat berpindah dari satu bagian ke bagian lainnya cukup dengan mengklik tombol menu — sistem akan secara otomatis menggulir ke bagian yang dituju. Hal ini menjadikan pengalaman pengguna lebih efisien dan intuitif. Di sisi teknis, NF Library dibangun menggunakan teknologi web modern berbasis Laravel Blade dan CSS yang ringan namun powerful, memastikan performa tetap optimal. Struktur layout disusun agar informasi penting mudah ditemukan, dan komponen seperti header, hero section, serta footer didesain dengan mempertimbangkan kenyamanan pengguna. Lebih dari sekadar sistem katalog buku digital, NF Library juga diharapkan menjadi wadah untuk meningkatkan literasi digital dan keterhubungan antar pembaca. Dengan adanya fitur kontak dan informasi tentang pengembang, NF Library membuka ruang interaksi untuk kolaborasi dan pengembangan berkelanjutan.
+                NF Library adalah sebuah platform perpustakaan digital modern berbasis web yang dirancang untuk memudahkan akses online terhadap koleksi buku. Tujuannya adalah untuk mendukung budaya membaca di kalangan pelajar dan masyarakat umum melalui antarmuka yang ramah pengguna.
                 </blockquote>
             </div>
   
@@ -100,25 +103,25 @@
             <div class="product-item" onclick="showBookModal('Filosofi Teras', 'Henry Manampiring', 'Buku pengantar filsafat stoik, mengajarkan cara berpikir tenang dan rasional.', '{{ asset('image/teras.png') }}', 5, 'https://drive.google.com/file/d/1YvhG12Y4ybauOALnOKV4j59Zkkq01Ntm/view?usp=sharing')">
                 <img src="./image/teras.png" alt="Filosofi Teras">
                 <p style="font-size: medium;"> Filosofi Teras</p>
-                <h3 style="margin-top: 70px;"> Henry Manampiring </h3>
+                <h3> Henry Manampiring </h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Nanti Juga Sembuh Sendiri', 'HeloBagas', 'Buku motivasi untuk menghadapi masalah hidup dengan sabar.', '{{ asset('image/Sembuh.png') }}', 4, 'https://drive.google.com/file/d/11SnXD29Lu2U0sCaF8QGQtCJi4k_AvK09/view?usp=sharing')">
                 <img src="./image/Sembuh.png" alt="Nanti Juga Sembuh Sendiri">
                 <p style="font-size: medium; ;">Nanti Juga Sembuh Sendiri</p>
-                <h3 style="margin-top: 20px;">HeloBagas</h3>
+                <h3>HeloBagas</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Stop Overthiking', 'Nick Treton', 'Panduan mengatasi overthinking dan kecemasan.', '{{ asset('image/overthinking.png') }}', 3, 'https://drive.google.com/file/d/1Z0Lub5LjmWPcT98N1Eodk88Q7q40y4mH/view?usp=sharing')">
                 <img src="./image/overthinking.png" alt="Stop Overthiking">
                 <p style="font-size: medium;">Stop Overthiking</p>
-                <h3 style="margin-top: 60px;">Nick Treton</h3>
+                <h3>Nick Treton</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Berdamai Dengan Emosi', 'Asti Musman', 'Tips mengelola emosi dan kesehatan mental.', '{{ asset('image/Emosi.png') }}', 5, 'https://drive.google.com/file/d/12Jj0fgriLICpuOlxpjAMzQ0_ixjCqga8/view?usp=sharing')">
                 <img src="./image/Emosi.png" alt="Berdamai Dengan Emosi">
                 <p style="font-size: medium;">Berdamai Dengan Emosi</p>
-                <h3 style="margin-top: 50px;">Asti Musman</h3>
+                <h3>Asti Musman</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', '{{ asset('image/memikat.png') }}', 4, 'https://drive.google.com/file/d/1_D7Z038zxq3a8tlpJcqQzO-KoNYhOhwX/view?usp=sharing')">
@@ -130,7 +133,7 @@
             <div class="product-item" onclick="showBookModal('Berani Tidak Disukai', 'Ichiro Kishimi & Fumitake Koga', 'Buku pengembangan diri tentang keberanian menjadi diri sendiri.', '{{ asset('image/Berani (1).png') }}', 5, 'https://drive.google.com/file/d/1YqJoPmDwr3sE61pVSB3Kam2HwwE1ee6p/view?usp=sharing')">
                 <img src="./image/Berani (1).png" alt="Berani Tidak Disukai">
                 <p style="font-size: medium;">Berani Tidak Disukai </p>
-                <h3 style="margin-top: 40px;">Ichiro Kishimi & Fumitake Koga</h3>
+                <h3>Ichiro Kishimi & Fumitake Koga</h3>
                 <span>★★★★★</span>
             </div>
             <p style="text-align:center; margin-top:20px;">
@@ -287,37 +290,37 @@
             <div class="product-item" onclick="showBookModal('30 Hari Jago Jualan', 'Dewa Eka Prayoga', 'Panduan praktis untuk meningkatkan penjualan dalam 30 hari.', '{{ asset('image/30 haei.png') }}', 5, 'https://drive.google.com/file/d/1bkc0wts8Iay0-KijJQ4toCjhwTIQ5G5x/view')">
                 <img src="./image/30 haei.png" alt="30 Hari Jago Jualan">
                 <p style="font-size: medium;">30 Hari Jago Jualan</p>
-                <h3 style=" margin-top: 70px;">Dewa Eka Prayoga </h3>
+                <h3>Dewa Eka Prayoga </h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('365 Tips Sehat ala Rasulullah', 'dr. Mohammad Ali Toha Assegaf', 'Tips kesehatan berdasarkan sunnah Rasulullah.', '{{ asset('image/365.png') }}', 5, 'https://drive.google.com/file/d/1Xl3RLtVcusQ-3G6HfzvT25nEy9Yj-LUn/view')">
                 <img src="./image/365.png" alt="365 Tips Sehat ala Rasulullah">
                 <p style="font-size: medium; ;">365 Tips Sehat ala Rasulullah</p>
-                <h3 style=" margin-top: 70px;"> dr. Mohammad Ali Toha Assegaf</h3>
+                <h3> dr. Mohammad Ali Toha Assegaf</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Pengantar Statistik', 'Hotniar Sorongoringo & Rachmat Agus Nursamsi', 'Buku pengantar statistik untuk pemula.', '{{ asset('image/statistik.png') }}', 5, 'https://drive.google.com/drive/folders/1SWeAMFIbAe_KWeRzzr1D9Tej65F2UlNK')">
                 <img src="./image/statistik.png" alt="Pengantar statistik">
                 <p style="font-size: medium;">Pengantar statistik</p>
-                <h3 style="margin-top: 50px;">Hotniar Sorongoringo & Rachmat Agus Nursamsi</h3>
+                <h3>Hotniar Sorongoringo & Rachmat Agus Nursamsi</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Think and Grow Rich', 'Napoleon Hill', 'Buku motivasi klasik tentang kesuksesan dan kekayaan.', '{{ asset('image/think.png') }}', 5, 'https://drive.google.com/file/d/1_xRaV7mTgLVNAW-ziL_8Bbxrpm2Fk0qO/view')">
                 <img src="./image/think.png" alt="Think and Grow Rich">
                 <p style="font-size: medium;">Think and Grow Rich</p>
-                <h3 style=" margin-top: 60px;">Napoleon Hill</h3>
+                <h3>Napoleon Hill</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Keajaiban Asmaul Husna', 'Ardi Gunawan', 'Mengenal keutamaan dan keajaiban Asmaul Husna.', '{{ asset('image/husna (1).png') }}', 5, 'https://drive.google.com/drive/folders/1TpyMA5rxPg0Dvf36LGIwG1r3a-jzGxuY')">
                 <img src="./image/husna (1).png" alt="Keajaiban Asmaul Husna">
                 <p style="font-size: medium;">Keajaiban Asmaul Husna</p>
-                <h3 style=" margin-top: 45px;">Ardi Gunawan</h3>
+                <h3>Ardi Gunawan</h3>
                 <span>★★★★★</span>
             </div>
             <div class="product-item" onclick="showBookModal('Keajaiban Istiqamah', 'Imam Sibawaih El Hasany', 'Kisah dan inspirasi tentang istiqamah dalam kehidupan.', '{{ asset('image/istiqamah.png') }}', 5, 'https://drive.google.com/file/d/1Xg6a-ViYzDjVx6iyopUsQ9f4GlABgpxq/view')">
                 <img src="./image/istiqamah.png" alt="Keajaiban Istiqamah">
                 <p style="font-size: medium;">Keajaiban Istiqamah </p>
-                <h3 style="margin-top: 50px;">Imam Sibawaih El Hasany</h3>
+                <h3>Imam Sibawaih El Hasany</h3>
                 <span>★★★★★</span>
             </div>
             <p style="text-align:center; margin-top:20px;">
@@ -337,9 +340,9 @@
     <section id="about-us">
         <div class="overlay">
             <div class="container">
-                <h1 style="text-align: left; text-decoration: underline;">About Us</h1>
+                <h1 style="text-align: left; text-decoration: underline;">Tentang Kita</h1>
                 <p style="text-align: left; font-size: 20px; font-weight: 400; line-height: 1.5; color: #333; font-family: 'Arial', sans-serif; color: white; text-align: justify;">
-                 NF Library adalah platform perpustakaan digital yang dikembangkan untuk mempermudah akses masyarakat terhadap koleksi buku dan literasi berbasis teknologi. Kami percaya bahwa membaca adalah pintu gerbang menuju ilmu pengetahuan, dan melalui NF Library, kami berkomitmen untuk menjadikannya lebih mudah, cepat, dan menyenangkan. Dengan tampilan antarmuka yang sederhana dan ramah pengguna, NF Library menghadirkan berbagai fitur penting seperti pencarian koleksi buku, tampilan ringkasan informasi buku, serta sistem navigasi yang terintegrasi dalam satu halaman. Semua ini dirancang untuk menciptakan pengalaman membaca digital yang nyaman dan efisien. Website ini dibangun menggunakan teknologi Laravel Blade dan CSS modern, yang memungkinkan sistem berjalan dengan ringan namun tetap responsif di berbagai perangkat. Kami juga memastikan bahwa tampilan antar menu seperti Beranda, Fitur, Koleksi, Tentang, dan Kontak dapat diakses dengan lancar dan intuitif. NF Library bukan hanya tempat untuk mencari buku, tetapi juga menjadi jembatan penghubung antara pengetahuan dan pembacanya. Kami membuka ruang untuk kolaborasi, saran, serta pengembangan lebih lanjut, demi menjadikan NF Library sebagai ekosistem literasi digital yang terus bertumbuh.
+                NF Library adalah platform perpustakaan digital yang dikembangkan untuk mempermudah akses Mahasiswa terhadap koleksi buku dan literasi berbasis teknologi. Diaplikasi ini kami memberikan kemudahan bagi pengguna untuk membaca buku secara online, mencari koleksi buku yang diinginkan, dan mendapatkan rekomendasi buku sesuai minat. Dengan antarmuka yang sederhana dan intuitif, NF Library bertujuan untuk meningkatkan minat baca Mahasiswa, terutama di kalangan Mahasiswa.
                 </p>
             </div>
         </div>
@@ -420,6 +423,17 @@ header {
     box-shadow: 0 4px 24px rgba(35,175,172,0.10);
     text-align: center;
 }
+.hero-subtitle {
+  text-align: left !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  font-size: 1.25rem;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #fff;
+}
 .product-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -428,15 +442,20 @@ header {
     margin-top: 30px;
 }
 .product-item {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 16px rgba(35,175,172,0.10);
-    padding: 18px 18px 12px 18px;
-    width: 180px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-    text-align: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(35,175,172,0.10);
+  padding: 18px 18px 16px 18px;
+  width: 180px;
+  min-height: 340px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
 }
 .product-item:hover {
     transform: translateY(-8px) scale(1.04);
@@ -444,16 +463,42 @@ header {
     background: #e0f7fa;
 }
 .product-item img {
-    width: 100px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(35,175,172,0.10);
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(35,175,172,0.10);
 }
-.product-item h3, .product-item p {
-    margin: 0;
-    color: #138a87;
+.product-item p {
+  font-size: 1.05em;
+  font-weight: 600;
+  margin: 8px 0 0 0;
+  color: #138a87;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.product-item h3 {
+  font-size: 0.98em;
+  font-weight: 400;
+  color: #333;
+  margin: 4px 0 4px 0;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.product-item span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 1.1em;
+  text-align: center;
 }
 .btn-selengkapnya {
     display: inline-block;
@@ -562,6 +607,46 @@ footer {
   outline: 3px solid #23afac;
   box-shadow: 0 0 0 6px #e0f7fa;
   transition: outline 0.2s, box-shadow 0.2s;
+}
+.animated-categories .animated-category {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: fadeUpScale 0.7s cubic-bezier(.4,1.6,.4,1) forwards;
+}
+.animated-categories .animated-category:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.animated-categories .animated-category:nth-child(2) {
+  animation-delay: 0.35s;
+}
+@keyframes fadeUpScale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animated-category:hover {
+  transform: scale(1.08) translateY(-8px) !important;
+  box-shadow: 0 8px 32px rgba(35,175,172,0.18);
+  transition: transform 0.25s, box-shadow 0.25s;
+  z-index: 2;
+}
+.animated-hero-image .hero-img-animate {
+  opacity: 0;
+  transform: scale(0.85) rotate(-8deg);
+  animation: heroImgFadeIn 1.1s cubic-bezier(.4,1.6,.4,1) 0.5s forwards;
+  transition: transform 0.35s cubic-bezier(.4,1.6,.4,1), box-shadow 0.25s;
+  box-shadow: 0 4px 24px rgba(35,175,172,0.13);
+}
+.animated-hero-image .hero-img-animate:hover {
+  transform: scale(1.04) rotate(2deg);
+  box-shadow: 0 12px 36px rgba(35,175,172,0.22);
+}
+@keyframes heroImgFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
 @media (max-width: 900px) {
     .footer-container {
