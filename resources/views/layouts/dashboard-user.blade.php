@@ -54,8 +54,9 @@
                                 <i class="fa fa-sign-out"></i> Logout
                             </button>
                         </form>
-                     </div>
-                </div>
+                    </div>
+               
+            </div>
           </header>
           
           <main>
