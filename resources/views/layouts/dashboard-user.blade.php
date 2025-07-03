@@ -136,7 +136,9 @@
                 <h3 style="margin-top: 40px;">Ichiro Kishimi & Fumitake Koga</h3>
                 <span>★★★★★</span>
             </div>
-            <p style="color:black; text-decoration: none;"><a href="./Fiksi.html">Selengkapnya</a></p>
+            <p style="text-align:center; margin-top:20px;">
+                <a href="{{ url('/fiksi') }}" class="btn-selengkapnya">Selengkapnya</a>
+            </p>
         </div>
     </section>
 
@@ -178,43 +180,45 @@
     <section class="under-25">
         <h2  id="Non-Fiksi" alt="Nonfiksi" style="text-decoration: underline;">Non-Fiksi</h2>
         <div class="product-carousel">
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('30 Hari Jago Jualan', 'Dewa Eka Prayoga', 'Panduan praktis untuk meningkatkan penjualan dalam 30 hari.', '{{ asset('image/30 haei.png') }}', 5, 'https://drive.google.com/nonfiksi1')">
                 <img src="./image/30 haei.png" alt="30 Hari Jago Jualan">
                 <p style="font-size: medium;">30 Hari Jago Jualan</p>
                 <h3 style=" margin-top: 70px;">Dewa Eka Prayoga </h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('365 Tips Sehat ala Rasulullah', 'dr. Mohammad Ali Toha Assegaf', 'Tips kesehatan berdasarkan sunnah Rasulullah.', '{{ asset('image/365.png') }}', 5, 'https://drive.google.com/nonfiksi2')">
                 <img src="./image/365.png" alt="365 Tips Sehat ala Rasulullah">
                 <p style="font-size: medium; ;">365 Tips Sehat ala Rasulullah</p>
                 <h3 style=" margin-top: 70px;"> dr. Mohammad Ali Toha Assegaf</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Pengantar Statistik', 'Hotniar Sorongoringo & Rachmat Agus Nursamsi', 'Buku pengantar statistik untuk pemula.', '{{ asset('image/statistik.png') }}', 5, 'https://drive.google.com/nonfiksi3')">
                 <img src="./image/statistik.png" alt="Pengantar statistik">
                 <p style="font-size: medium;">Pengantar statistik</p>
                 <h3 style="margin-top: 50px;">Hotniar Sorongoringo & Rachmat Agus Nursamsi</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Think and Grow Rich', 'Napoleon Hill', 'Buku motivasi klasik tentang kesuksesan dan kekayaan.', '{{ asset('image/think.png') }}', 5, 'https://drive.google.com/nonfiksi4')">
                 <img src="./image/think.png" alt="Think and Grow Rich">
                 <p style="font-size: medium;">Think and Grow Rich</p>
                 <h3 style=" margin-top: 60px;">Napoleon Hill</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Keajaiban Asmaul Husna', 'Ardi Gunawan', 'Mengenal keutamaan dan keajaiban Asmaul Husna.', '{{ asset('image/husna (1).png') }}', 5, 'https://drive.google.com/nonfiksi5')">
                 <img src="./image/husna (1).png" alt="Keajaiban Asmaul Husna">
                 <p style="font-size: medium;">Keajaiban Asmaul Husna</p>
                 <h3 style=" margin-top: 45px;">Ardi Gunawan</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="showBookModal('Keajaiban Istiqamah', 'Imam Sibawaih El Hasany', 'Kisah dan inspirasi tentang istiqamah dalam kehidupan.', '{{ asset('image/istiqamah.png') }}', 5, 'https://drive.google.com/nonfiksi6')">
                 <img src="./image/istiqamah.png" alt="Keajaiban Istiqamah">
                 <p style="font-size: medium;">Keajaiban Istiqamah </p>
                 <h3 style="margin-top: 50px;">Imam Sibawaih El Hasany</h3>
                 <span>★★★★★</span>
             </div>
-            <p style="color:black; text-decoration: none;"><a href="./Non fiksi.html">Selengkapnya</a></p>
+            <p style="text-align:center; margin-top:20px;">
+                <a href="{{ url('/nonfiksi') }}" class="btn-selengkapnya">Selengkapnya</a>
+            </p>
         </div>
     </section>
     
@@ -242,44 +246,30 @@
         <div class="footer-container">
             <div class="footer-column">
                 <div class="penulis">
-                        <img src="../P8_Landing Page Apotik/Image/FOTO TUGAS.jpeg" alt="Foto Silva Nurzanatul Dahmalena" style="width:90px ;">    
+                        <img src="../P8_Landing Page Apotik/Image/FOTO TUGAS.jpeg" alt="" style="width:90px ;">    
                         <div class="info-penulis">
-                            <h3>Silva Nurzanatul Dahmalena</h3>
-                            <p style="font-size: 15px;">Silva, yang lebih akrab disapa Sil, adalah Mahasiswa semester 1 Prodi Teknik Informatika yang sedang menempuh pendidikan di kampus STT Terpadu NurulFikri.
-                                Ia suka menonton film, mendengarkan musik dan membuat Landing Page sederhana seperti website apotek ini contohnya.
-                                Melalui landing page ini , Silva ingin berbagi informasi dan membantu dalam pembelian obat secara online. 
-                                Kenali Silva lebih dekat dengan klik logo dibawah ini.</p><br>
-                                <div class="sosmed">
-                                    <a href="https://Instagram.com/ysxlvy_">
-                                        <i class="fa-brands fa-instagram"></i><br>
-                                      </a>
-                                      <a href="https://youTube.com/silvadahmalena9059">
-                                        <i class="fa-brands fa-youtube"></i><br>
-                                      </a>
-                                      <a href="https://Github.com/Silva-TI">
-                                        <i class="fa-brands fa-github"></i><br>
-                                        </a>
-                                 </div>
+                            <h3>Group 01</h3>
+                            <p style="font-size: 15px;">- muhammad ihsan<br>- Anis Adriyani<br>- Ali Mahbub<br>- Fadhil Muhammad Zain<br>- Zaidaan Salman<br>- Silva Nurzanatul Dahmalena<br>- Muhammad Zaidan Syah.......</p><br>
                         </div>
                     </div>
                 </div>
                 <div class="footer-column">
 
-                    <h3 style="color: white; text-decoration: underline;">About</h3>
+                    <h3 style="color: white; text-decoration: underline;">Tentang</h3>
                     <ul>
-                        <li> <a href="#about-us">About Us</a></li>
-                        <li> <a href="#Apotek">Online Medicine Orders </a></li>
-                        <li> <a href="#Sale">Promo</a></li>
-                        <li ><a href="#Home">Home Pharmacy</a></li>
+                        <li> <a href="#tentangpada">Tentang Kita</a></li>
+                        <li> <a href="#"></a></li>
+                        <li> <a href="#"></a></li>
+                        <li ><a href="#"></a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
 
-                    <h3 style="color: white; text-decoration: underline;">Our Products</h3>
+                    <h3 style="color: white; text-decoration: underline;">Layanan</h3>
                     <ul>
-                        <li><a href="#Remaja Jompo" >Remaja Jompo</a></li>
-                        <li><a href="#Mom" >Mom and Baby</a></li>
-                        <li><a href="#p3k" >P3K</a></li>
+                        <li><a href="#koleksi" >Baca Buku</a></li>
+                        <li><a href="#Mom" ></a></li>
+                        <li><a href="#p3k" ></a></li>
                     </ul>
                 </div>   
             
@@ -290,7 +280,7 @@
             <a href="#" aria-label="Web"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
           <p class="footer-copyright">
-            <h4>&copy; Copyright by Silva - 2024</h4>
+            <h4>&copy; Copyright by Library - 2025</h4>
           </p>
           <div class="footer-links">
             <a href="#">Cookies</a>
@@ -306,3 +296,145 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>   
 </body>
 </html>
+
+<style>
+body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e0f7fa 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+header {
+    box-shadow: 0 2px 8px rgba(35,175,172,0.08);
+    background: #fff;
+}
+.hero {
+    background: linear-gradient(90deg, #23afac 60%, #138a87 100%);
+    color: #fff;
+    border-radius: 18px;
+    margin: 30px auto 40px auto;
+    padding: 40px 0 30px 0;
+    box-shadow: 0 4px 24px rgba(35,175,172,0.10);
+    text-align: center;
+}
+.product-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.product-item {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(35,175,172,0.10);
+    padding: 18px 18px 12px 18px;
+    width: 180px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+.product-item:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(35,175,172,0.18);
+    background: #e0f7fa;
+}
+.product-item img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(35,175,172,0.10);
+}
+.product-item h3, .product-item p {
+    margin: 0;
+    color: #138a87;
+}
+.btn-selengkapnya {
+    display: inline-block;
+    background: linear-gradient(90deg, #23afac 60%, #138a87 100%);
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 28px;
+    border-radius: 25px;
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(35,175,172,0.12);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    margin: 0 auto;
+}
+.btn-selengkapnya:hover, .btn-selengkapnya:focus {
+    background: linear-gradient(90deg, #138a87 60%, #23afac 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(35,175,172,0.18);
+    text-decoration: none !important;
+}
+footer {
+    background: linear-gradient(90deg, #138a87 60%, #23afac 100%);
+    color: #fff;
+    padding: 40px 0 10px 0;
+    margin-top: 60px;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 16px rgba(35,175,172,0.10);
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-column {
+    flex: 1 1 220px;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-column h3 {
+    color: #fff;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-column ul li a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+.penulis img {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(35,175,172,0.18);
+}
+.info-penulis {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 8px;
+    white-space: pre-line;
+}
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
