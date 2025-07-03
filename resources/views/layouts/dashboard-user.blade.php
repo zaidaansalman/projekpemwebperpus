@@ -100,37 +100,37 @@
         <section class="under-25" id="koleksi" style="margin-bottom: 80px;">
         <h2 id="Fiksi" alt="Fiksi" style="text-decoration: underline;">Fiksi</h2>
         <div class="product-carousel">
-            <div class="product-item" onclick="showBookModal('Filosofi Teras', 'Henry Manampiring', 'Buku pengantar filsafat stoik, mengajarkan cara berpikir tenang dan rasional.', '{{ asset('image/teras.png') }}', 5, 'https://drive.google.com/example1')">
+            <div class="product-item" onclick="showBookModal('Filosofi Teras', 'Henry Manampiring', 'Buku pengantar filsafat stoik, mengajarkan cara berpikir tenang dan rasional.', '{{ asset('image/teras.png') }}', 5, 'https://drive.google.com/file/d/1YvhG12Y4ybauOALnOKV4j59Zkkq01Ntm/view?usp=sharing')">
                 <img src="./image/teras.png" alt="Filosofi Teras">
                 <p style="font-size: medium;"> Filosofi Teras</p>
                 <h3 style="margin-top: 70px;"> Henry Manampiring </h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Nanti Juga Sembuh Sendiri', 'HeloBagas', 'Buku motivasi untuk menghadapi masalah hidup dengan sabar.', '{{ asset('image/Sembuh.png') }}', 5, 'https://drive.google.com/example2')">
+            <div class="product-item" onclick="showBookModal('Nanti Juga Sembuh Sendiri', 'HeloBagas', 'Buku motivasi untuk menghadapi masalah hidup dengan sabar.', '{{ asset('image/Sembuh.png') }}', 4, 'https://drive.google.com/file/d/11SnXD29Lu2U0sCaF8QGQtCJi4k_AvK09/view?usp=sharing')">
                 <img src="./image/Sembuh.png" alt="Nanti Juga Sembuh Sendiri">
                 <p style="font-size: medium; ;">Nanti Juga Sembuh Sendiri</p>
                 <h3 style="margin-top: 20px;">HeloBagas</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Stop Overthiking', 'Nick Treton', 'Panduan mengatasi overthinking dan kecemasan.', '{{ asset('image/overthinking.png') }}', 5, 'https://drive.google.com/example3')">
+            <div class="product-item" onclick="showBookModal('Stop Overthiking', 'Nick Treton', 'Panduan mengatasi overthinking dan kecemasan.', '{{ asset('image/overthinking.png') }}', 3, 'https://drive.google.com/file/d/1Z0Lub5LjmWPcT98N1Eodk88Q7q40y4mH/view?usp=sharing')">
                 <img src="./image/overthinking.png" alt="Stop Overthiking">
                 <p style="font-size: medium;">Stop Overthiking</p>
                 <h3 style="margin-top: 60px;">Nick Treton</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Berdamai Dengan Emosi', 'Asti Musman', 'Tips mengelola emosi dan kesehatan mental.', '{{ asset('image/Emosi.png') }}', 5, 'https://drive.google.com/example4')">
+            <div class="product-item" onclick="showBookModal('Berdamai Dengan Emosi', 'Asti Musman', 'Tips mengelola emosi dan kesehatan mental.', '{{ asset('image/Emosi.png') }}', 5, 'https://drive.google.com/file/d/12Jj0fgriLICpuOlxpjAMzQ0_ixjCqga8/view?usp=sharing')">
                 <img src="./image/Emosi.png" alt="Berdamai Dengan Emosi">
                 <p style="font-size: medium;">Berdamai Dengan Emosi</p>
                 <h3 style="margin-top: 50px;">Asti Musman</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', '{{ asset('image/memikat.png') }}', 5, 'https://drive.google.com/example5')">
+            <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', '{{ asset('image/memikat.png') }}', 4, 'https://drive.google.com/file/d/1_D7Z038zxq3a8tlpJcqQzO-KoNYhOhwX/view?usp=sharing')">
                 <img src="./image/memikat.png" alt="Trik Memikat & Mempengaruhi Lawan Bicara">
                 <p style="font-size: medium;">Trik Memikat & Mempengaruhi Lawan Bicara</p>
                 <h3>Yoga Pratama</h3>
                 <span>★★★★★</span>
             </div>
-            <div class="product-item" onclick="showBookModal('Berani Tidak Disukai', 'Ichiro Kishimi & Fumitake Koga', 'Buku pengembangan diri tentang keberanian menjadi diri sendiri.', '{{ asset('image/Berani (1).png') }}', 5, 'https://drive.google.com/example6')">
+            <div class="product-item" onclick="showBookModal('Berani Tidak Disukai', 'Ichiro Kishimi & Fumitake Koga', 'Buku pengembangan diri tentang keberanian menjadi diri sendiri.', '{{ asset('image/Berani (1).png') }}', 5, 'https://drive.google.com/file/d/1YqJoPmDwr3sE61pVSB3Kam2HwwE1ee6p/view?usp=sharing')">
                 <img src="./image/Berani (1).png" alt="Berani Tidak Disukai">
                 <p style="font-size: medium;">Berani Tidak Disukai </p>
                 <h3 style="margin-top: 40px;">Ichiro Kishimi & Fumitake Koga</h3>

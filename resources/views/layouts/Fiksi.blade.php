@@ -98,73 +98,73 @@
                 <h2 id="Fiksi" alt="Fiksi" class="mb-0 text-center position-absolute top-50 start-50 translate-middle-x" style="left:50%;transform:translate(-50%,-50%);width:max-content;">Koleksi Buku Fiksi</h2>
             </div>
             <div class="product-carousel">
-                <div class="product-item" onclick="showBookModal('Filosofi Teras', 'Henry Manampiring', 'Buku pengantar filsafat stoik, mengajarkan cara berpikir tenang dan rasional.', './image/teras.png', 5, 'https://drive.google.com/example1')">
+                <div class="product-item" onclick="showBookModal('Filosofi Teras', 'Henry Manampiring', 'Buku pengantar filsafat stoik, mengajarkan cara berpikir tenang dan rasional.', './image/teras.png', 5, 'https://drive.google.com/file/d/1YvhG12Y4ybauOALnOKV4j59Zkkq01Ntm/view?usp=sharing')">
                     <img src="./image/teras.png" alt="Filosofi Teras">
                     <p><a href="#">Filosofi Teras</a></p>
                     <h3>Henry Manampiring</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Nanti Juga Sembuh Sendiri', 'HeloBagas', 'Buku motivasi untuk menghadapi masalah hidup dengan sabar.', './image/Sembuh.png', 5, 'https://drive.google.com/example2')">
+                <div class="product-item" onclick="showBookModal('Nanti Juga Sembuh Sendiri', 'HeloBagas', 'Buku motivasi untuk menghadapi masalah hidup dengan sabar.', './image/Sembuh.png', 4, 'https://drive.google.com/file/d/11SnXD29Lu2U0sCaF8QGQtCJi4k_AvK09/view?usp=sharing')">
                     <img src="./image/Sembuh.png" alt="Nanti Juga Sembuh Sendiri">
                     <p>Nanti Juga Sembuh Sendiri</p>
                     <h3>HeloBagas</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Stop Overthiking', 'Nick Treton', 'Panduan mengatasi overthinking dan kecemasan.', './image/overthinking.png', 5, 'https://drive.google.com/example3')">
+                <div class="product-item" onclick="showBookModal('Stop Overthiking', 'Nick Treton', 'Panduan mengatasi overthinking dan kecemasan.', './image/overthinking.png', 3, 'https://drive.google.com/file/d/1Z0Lub5LjmWPcT98N1Eodk88Q7q40y4mH/view?usp=sharing')">
                     <img src="./image/overthinking.png" alt="Stop Overthiking">
                     <p>Stop Overthiking</p>
                     <h3>Nick Treton</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Berdamai Dengan Emosi', 'Asti Musman', 'Tips mengelola emosi dan kesehatan mental.', './image/Emosi.png', 5, 'https://drive.google.com/example4')">
+                <div class="product-item" onclick="showBookModal('Berdamai Dengan Emosi', 'Asti Musman', 'Tips mengelola emosi dan kesehatan mental.', './image/Emosi.png', 5, 'https://drive.google.com/file/d/12Jj0fgriLICpuOlxpjAMzQ0_ixjCqga8/view?usp=sharing')">
                     <img src="./image/Emosi.png" alt="Berdamai Dengan Emosi">
                     <p>Berdamai Dengan Emosi</p>
                     <h3>Asti Musman</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', './image/memikat.png', 5, 'https://drive.google.com/example5')">
+                <div class="product-item" onclick="showBookModal('Trik Memikat & Mempengaruhi Lawan Bicara', 'Yoga Pratama', 'Teknik komunikasi efektif untuk memikat lawan bicara.', './image/memikat.png', 4, 'https://drive.google.com/file/d/1_D7Z038zxq3a8tlpJcqQzO-KoNYhOhwX/view?usp=sharing')">
                     <img src="./image/memikat.png" alt="Trik Memikat & Mempengaruhi Lawan Bicara">
                     <p>Trik Memikat & Mempengaruhi Lawan Bicara</p>
                     <h3>Yoga Pratama</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item" onclick="showBookModal('Berani Tidak Disukai', 'Ichiro Kishimi & Fumitake Koga', 'Buku pengembangan diri tentang keberanian menjadi diri sendiri.', './image/Berani (1).png', 5, 'https://drive.google.com/example6')">
+                <div class="product-item" onclick="showBookModal('Berani Tidak Disukai', 'Ichiro Kishimi & Fumitake Koga', 'Buku pengembangan diri tentang keberanian menjadi diri sendiri.', './image/Berani (1).png', 5, 'https://drive.google.com/file/d/1YqJoPmDwr3sE61pVSB3Kam2HwwE1ee6p/view?usp=sharing')">
                     <img src="./image/Berani (1).png" alt="Berani Tidak Disukai ">
                     <p>Berani Tidak Disukai</p>
                     <h3>Ichiro Kishimi & Fumitake Koga</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item">
+                <div class="product-item" onclick="showBookModal('The Master Book Of Personal Branding', 'Farco Siswiyanto Raharjo', 'Seni Membangun Merek Diri dengan Teknik Berbicara.', './image/Branding.png', 4, 'https://drive.google.com/file/d/1_L0MRLuKpKY76TrOMs1X0y_oBtYgN7R-/view?usp=sharing')">
                     <img src="./image/Branding.png" alt="The Master Book Of Personal Branding">
                     <p>The Master Book Of Personal Branding</p>
                     <h3>Farco Siswiyanto Raharjo</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item">
+                <div class="product-item" onclick="showBookModal('Mencari Teman & Memengaruhi Orang', 'Christiana Weni', '101 Langkah Menjadi Pribadi yang Disenangi & Berpengaruh.', './image/Cari teman.png', 5, 'https://drive.google.com/file/d/1ZdxROBStN2XatWL1bkAaU9TX2jbqw_oB/view?usp=sharing')">
                     <img src="./image/Cari teman.png" alt="Mencari Teman & Memengaruhi Orang">
                     <p>Mencari Teman & Memengaruhi Orang</p>
                     <h3>Christiana Weni</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item">
+                <div class="product-item" onclick="showBookModal('MINDSET', 'DR CAROL S DWECK', 'Changing the way you think to fulfil your potential.', './image/mindset.png', 5, 'https://drive.google.com/file/d/1_7a3Y059G5AcfnmRJxyUi9m1tU7YNQId/view?usp=sharing')">
                     <img src="./image/mindset.png" alt="MINDSET">
                     <p>MINDSET</p>
                     <h3>DR CAROL S DWECK</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item">
+                <div class="product-item" onclick="showBookModal('Aku yang lebih Kuat dari kemarin', 'Farah Via Rahmawati', 'Buku ini memotivasi pembaca agar bangkit dari luka, menjadi lebih kuat, dan mencintai diri sendiri.', './image/Lebih Kuat.png', 4, 'https://drive.google.com/file/d/11zGu3DNZMRUjXRPboUUG1i2OqxjKOizW/view?usp=sharing')">
                     <img src="./image/Lebih Kuat.png" alt="Aku yang lebih Kuat dari kemarin">
                     <p>Aku yang lebih Kuat dari kemarin</p>
                     <h3>Farah Via Rahmawati</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item">
+                <div class="product-item" onclick="showBookModal('Buku Antimalas dan Suka Menunda', 'Choi Myeong Gi', 'Buku ini berisi tips agar tidak malas dan berhenti menunda, supaya hidup lebih produktif.', './image/antimalas.png', 5, 'https://drive.google.com/file/d/1aWojxYP3cE-puSWpaxfOt0GJFSu7OtSu/view?usp=sharing')">
                     <img src="./image/antimalas.png" alt="Buku Antimalas dan Suka Menunda">
                     <p>Buku Antimalas dan Suka Menunda</p>
                     <h3>Choi Myeong Gi</h3>
                     <span>★★★★★</span>
                 </div>
-                <div class="product-item">
+                <div class="product-item" onclick="showBookModal('Anatomic Habits', 'James Clear', 'Cara Mudah dan Terbukti untuk Membentuk Kebiasaan Baik dan Menghilangkan Kebiasaan Buruk.', './image/habits.png', 4, 'https://drive.google.com/file/d/1ZC3vlGnj2-9-MDVlnyHVYaNc9SQnAvaS/view?usp=sharing')">
                     <img src="./image/habits.png" alt="Anatomic Habits">
                     <p>Anatomic Habits</p>
                     <h3>James Clear</h3>
