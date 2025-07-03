@@ -12,31 +12,49 @@
 <body>
     <!-- Header Section -->
 
-        <header>
-            <div class="navbar" id="Home">
-                <div class="logo">
-                    <img src="......" alt="Logo">
+        <header class="sticky-top py-2 border-bottom bg-white">
+            <div class="container d-flex align-items-center justify-content-between">
+
+                 <div class="d-flex align-items-center">
+                    <img src="{{ asset('image/logo.png') }}" alt="Logo" style="height: 50px;">
+                    <span class="ms-2 fw-bold">PERPUS</span> 
                 </div>
-                <nav id="mainNav" style="text-align: center;">
-                <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#features">Fitur</a></li>
-                    <li><a href="#books">Koleksi</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-            </nav>
+
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#features" class="nav-link">Fitur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#books" class="nav-link">Koleksi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Kontak</a>
+                        </li>
+                    </ul>
+                </nav>
                 
-                    <div class="d-flex justify-content-end mb-3" style="justify-content: flex-end;">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button class="btn btn-outline-white" style="background-color: #23afac; color: white;" type="submit">Search</button>
+                <div class="d-flex align-items-center">
+                     <form class="d-flex" role="search">
+                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                         <button class="btn" style="background-color: #23afac; color: white;" type="submit">
+                             Search
+                         </button>
+                     </form>
+
+                        <form action="{{ route('logout') }}" method="POST" class="ms-3">
+                            @csrf
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin kleuar dari apliksi?')">
+                                <i class="fa fa-sign-out"></i> Logout
+                            </button>
                         </form>
-                         <a href="/logout" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">
-                    <i class="fa fa-sign-out"></i>
-                    <span>Logout</span>
                     </div>
-                     <li>
                
             </div>
           </header>
