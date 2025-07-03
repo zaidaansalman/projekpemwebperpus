@@ -175,6 +175,113 @@
         var myModal = new bootstrap.Modal(document.getElementById('bookModal'));
         myModal.show();
       }
+
+      // Pencarian buku berdasarkan judul + suggestion list realtime
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchForm = document.querySelector('form[role="search"]');
+        const searchInput = searchForm.querySelector('input[type="search"]');
+        // --- SUGGESTION LIST ---
+        // Kumpulan judul buku dari Fiksi & NonFiksi (harus sama persis dengan yang di halaman)
+        const books = [
+          // Fiksi
+          { title: 'Filosofi Teras', section: 'Fiksi' },
+          { title: 'Nanti Juga Sembuh Sendiri', section: 'Fiksi' },
+          { title: 'Stop Overthiking', section: 'Fiksi' },
+          { title: 'Berdamai Dengan Emosi', section: 'Fiksi' },
+          { title: 'Trik Memikat & Mempengaruhi Lawan Bicara', section: 'Fiksi' },
+          { title: 'Berani Tidak Disukai', section: 'Fiksi' },
+          // NonFiksi
+          { title: '30 Hari Jago Jualan', section: 'Non-Fiksi' },
+          { title: '365 Tips Sehat ala Rasulullah', section: 'Non-Fiksi' },
+          { title: 'Pengantar statistik', section: 'Non-Fiksi' },
+          { title: 'Think and Grow Rich', section: 'Non-Fiksi' },
+          { title: 'Keajaiban Asmaul Husna', section: 'Non-Fiksi' },
+          { title: 'Keajaiban Istiqamah', section: 'Non-Fiksi' },
+        ];
+        // Buat suggestion list element
+        let suggestionList = document.createElement('ul');
+        suggestionList.className = 'search-suggestion-list';
+        suggestionList.style.display = 'none';
+        suggestionList.style.position = 'absolute';
+        suggestionList.style.zIndex = '1000';
+        suggestionList.style.width = searchInput.offsetWidth + 'px';
+        searchForm.style.position = 'relative';
+        searchForm.appendChild(suggestionList);
+
+        // Update suggestion list per-huruf
+        searchInput.addEventListener('input', function() {
+          const keyword = searchInput.value.trim().toLowerCase();
+          suggestionList.innerHTML = '';
+          if (!keyword) {
+            suggestionList.style.display = 'none';
+            return;
+          }
+          // Filter judul
+          const filtered = books.filter(b => b.title.toLowerCase().includes(keyword));
+          if (filtered.length === 0) {
+            suggestionList.style.display = 'none';
+            return;
+          }
+          filtered.forEach(b => {
+            const li = document.createElement('li');
+            li.textContent = b.title + ' [' + b.section + ']';
+            li.className = 'suggestion-item';
+            li.tabIndex = 0;
+            li.onclick = function() {
+              // Cek apakah buku ada di halaman (dashboard)
+              const items = document.querySelectorAll('.product-item');
+              let found = false;
+              items.forEach(item => {
+                const title = item.querySelector('p, .product-title, p a')?.innerText?.toLowerCase() || '';
+                if (title === b.title.toLowerCase()) {
+                  item.scrollIntoView({behavior: 'smooth', block: 'center'});
+                  item.classList.add('highlighted-book');
+                  setTimeout(() => item.classList.remove('highlighted-book'), 1200);
+                  found = true;
+                }
+              });
+              if (!found) {
+                // Redirect ke halaman fiksi/nonfiksi dengan query
+                if (b.section === 'Fiksi') {
+                  window.location.href = '/fiksi?search=' + encodeURIComponent(b.title);
+                } else {
+                  window.location.href = '/nonfiksi?search=' + encodeURIComponent(b.title);
+                }
+              }
+              suggestionList.style.display = 'none';
+            };
+            suggestionList.appendChild(li);
+          });
+          suggestionList.style.display = 'block';
+        });
+        // Hide suggestion jika klik di luar
+        document.addEventListener('click', function(e) {
+          if (!searchForm.contains(e.target)) suggestionList.style.display = 'none';
+        });
+        // --- END SUGGESTION ---
+
+        // Pencarian submit (filtering di halaman)
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const keyword = searchInput.value.trim().toLowerCase();
+          const items = document.querySelectorAll('.product-item');
+          let found = false;
+          items.forEach(item => {
+            const title = item.querySelector('p, .product-title, p a')?.innerText?.toLowerCase() || '';
+            if (title.includes(keyword) || keyword === '') {
+              item.style.display = '';
+              found = true;
+            } else {
+              item.style.display = 'none';
+            }
+          });
+          // Optional: scroll ke koleksi jika hasil ditemukan
+          if (found && keyword !== '') {
+            const koleksi = document.getElementById('koleksi');
+            if (koleksi) koleksi.scrollIntoView({behavior: 'smooth'});
+          }
+        });
+      });
     </script>
 
     <section class="under-25">
@@ -426,6 +533,38 @@ footer {
     text-align: center;
     margin-top: 20px;
     color: #fff;
+}
+.search-suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #23afac;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 16px rgba(35,175,172,0.10);
+  max-height: 220px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+}
+.suggestion-item {
+  padding: 10px 18px;
+  cursor: pointer;
+  color: #138a87;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+.suggestion-item:hover, .suggestion-item:focus {
+  background: #e0f7fa;
+  color: #23afac;
+}
+.highlighted-book {
+  outline: 3px solid #23afac;
+  box-shadow: 0 0 0 6px #e0f7fa;
+  transition: outline 0.2s, box-shadow 0.2s;
 }
 @media (max-width: 900px) {
     .footer-container {

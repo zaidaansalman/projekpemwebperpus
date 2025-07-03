@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiksi | NF Library</title>
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .under-25 {
+            margin: 40px auto 80px auto;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(35,175,172,0.08);
+            padding: 32px 24px;
+        }
+        .under-25 h2 {
+            text-align: center;
+            font-weight: bold;
+            color: #23afac;
+            margin-bottom: 32px;
+            text-decoration: underline;
+        }
+        .product-carousel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            justify-items: center;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        .product-item {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(35,175,172,0.10);
+            padding: 18px 12px 24px 12px;
+            text-align: center;
+            transition: transform 0.18s, box-shadow 0.18s;
+            cursor: pointer;
+        }
+        .product-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(35,175,172,0.18);
+        }
+        .product-item img {
+            width: 120px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(35,175,172,0.10);
+        }
+        .product-item p {
+            font-size: 1.08em;
+            font-weight: 500;
+            margin: 8px 0 0 0;
+            color: #138a87;
+        }
+        .product-item h3 {
+            font-size: 1em;
+            font-weight: 400;
+            margin: 12px 0 0 0;
+            color: #444;
+        }
+        .product-item span {
+            color: #ffc107;
+            font-size: 1.1em;
+            margin-top: 8px;
+            display: block;
+        }
+        .btn-back {
+            display: inline-block;
+            margin: 0 0 24px 0;
+            background: linear-gradient(90deg, #23afac 60%, #138a87 100%);
+            color: #fff;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 8px 28px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-back:hover {
+            background: linear-gradient(90deg, #138a87 60%, #23afac 100%);
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
