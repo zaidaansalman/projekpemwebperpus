@@ -33,7 +33,8 @@
 				</div>
 				<!-- /.box-header -->
 				<!-- form start -->
-				<form action="" method="post" enctype="multipart/form-data">
+				<form action="{{ route('sirkulasi.store') }}" method="post" enctype="multipart/form-data">
+					@csrf
 					<div class="box-body">
 						<div class="form-group">
 							<label>Id Sirkulasi</label>
@@ -45,7 +46,11 @@
 							<label>Nama Peminjam</label>
 							<select name="id_anggota" id="id_anggota" class="form-control select2" style="width: 100%;">
 								<option selected="selected">-- Pilih --</option>
-								<option value="A001">Stephanie Aselole</option>
+								@if(isset($anggotas))
+									@foreach($anggotas as $anggota)
+										<option value="{{ $anggota->id }}">{{ $anggota->nama }}</option>
+									@endforeach
+								@endif
 							</select>
 						</div>
 
@@ -53,7 +58,11 @@
 							<label>Buku</label>
 							<select name="id_buku" id="id_buku" class="form-control select2" style="width: 100%;">
 								<option selected="selected">-- Pilih --</option>
-								<option value="B001">B001 - Buku Pemrograman PHP</option>
+								@if(isset($bukus))
+									@foreach($bukus as $buku)
+										<option value="{{ $buku->id }}">{{ $buku->id }} - {{ $buku->judul_buku }}</option>
+									@endforeach
+								@endif
 							</select>
 						</div>
 

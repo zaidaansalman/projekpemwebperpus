@@ -57,9 +57,12 @@
             <a href="" onclick="return confirm('Perpanjang Data Ini ?')" title="Perpanjang" class="btn btn-success">
                 <i class="glyphicon glyphicon-upload"></i>
             </a>
-            <a href="" onclick="return confirm('Kembalikan Buku Ini ?')" title="Kembalikan" class="btn btn-danger">
-                <i class="glyphicon glyphicon-download"></i>
-            </a>
+            <form action="{{ route('sirkulasi.kembalikan', $sirkul->id) }}" method="POST" style="display:inline;">
+                @csrf
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Kembalikan Buku Ini ?')">
+                    <i class="glyphicon glyphicon-download"></i>
+                </button>
+            </form>
         </td>
     </tr>
     @endforeach

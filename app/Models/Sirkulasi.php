@@ -14,6 +14,7 @@ class Sirkulasi extends Model
         'anggota_id',
         'tgl_pinjam',
         'jatuh_tempo',
+        'tgl_kembali',
         'denda'
     ];
 

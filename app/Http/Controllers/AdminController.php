@@ -7,6 +7,7 @@ use App\Models\Kategori;
 use App\Models\Buku;
 use App\Models\Anggota;
 use App\Models\Sirkulasi;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -175,6 +176,49 @@ class AdminController extends Controller
         $user = \App\Models\User::findOrFail($id);
         $user->delete();
         return redirect('/data-pengguna')->with('success', 'Pengguna berhasil dihapus!');
+    }
+
+    // Store new sirkulasi
+    public function storeSirkulasi(Request $request)
+    {
+        $validated = $request->validate([
+            'id_anggota' => 'required|exists:anggotas,id',
+            'id_buku' => 'required|exists:books,id', // perbaikan di sini
+            'tgl_pinjam' => 'required|date',
+        ]);
+
+        $tgl_pinjam = $validated['tgl_pinjam'];
+        $tgl_kembali = Carbon::parse($tgl_pinjam)->addDays(7)->format('Y-m-d');
+        
+
+
+        \App\Models\Sirkulasi::create([
+            //'jatuh_tempo' => $jatuh_tempo, // diisi otomatis
+            'anggota_id' => $validated['id_anggota'],
+            'buku_id' => $validated['id_buku'],
+            'tgl_pinjam' => $tgl_pinjam,
+            'tgl_kembali' => $tgl_kembali, // Tambahkan ini
+            'status' => 'Dipinjam',
+            'denda' => 1000, // default denda
+        ]);
+
+        return redirect('/data-sirkul')->with('success', 'Peminjaman berhasil ditambahkan!');
+    }
+
+    // Kembalikan sirkulasi (return book and calculate denda)
+    public function kembalikanSirkulasi($id)
+    {
+        $sirkulasi = \App\Models\Sirkulasi::findOrFail($id);
+        $today = date('Y-m-d');
+        $tgl_kembali = $sirkulasi->tgl_kembali;
+        $lateDays = (strtotime($today) > strtotime($tgl_kembali)) ? (strtotime($today) - strtotime($tgl_kembali)) / 86400 : 0;
+        $denda = $lateDays > 0 ? $lateDays * 1000 : 0;
+
+        $sirkulasi->status = 'Dikembalikan';
+        $sirkulasi->denda = $denda;
+        $sirkulasi->save();
+
+        return redirect('/data-sirkul')->with('success', 'Buku berhasil dikembalikan!');
     }
 
     // Dashboard

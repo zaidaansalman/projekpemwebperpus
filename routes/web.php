@@ -68,8 +68,14 @@ Route::get('/data-sirkul', function () {
 
 // Tambah Sirkulasi
 Route::get('/add-sirkul', function () {
-    return view('layouts.sirkul.add-sirkul');
+    $anggotas = \App\Models\Anggota::all();
+    $bukus = \App\Models\Buku::all();
+    return view('layouts.sirkul.add-sirkul', compact('anggotas', 'bukus'));
 });
+Route::post('/add-sirkul', [App\Http\Controllers\AdminController::class, 'storeSirkulasi'])->name('sirkulasi.store');
+
+// Kembalikan Sirkulasi
+Route::post('/kembalikan-sirkul/{id}', [App\Http\Controllers\AdminController::class, 'kembalikanSirkulasi'])->name('sirkulasi.kembalikan');
 
 // Log Pinjam
 Route::get('/log-pinjam', function () {
