@@ -114,3 +114,7 @@ Route::post('/edit-pengguna/{id}', [App\Http\Controllers\AdminController::class,
 
 // Delete Pengguna
 Route::post('/delete-pengguna/{id}', [App\Http\Controllers\AdminController::class, 'deletePengguna'])->name('pengguna.delete');
+
+// Fiksi and NonFiksi pages
+Route::get('/fiksi', [App\Http\Controllers\UserController::class, 'fiksi']);
+Route::get('/nonfiksi', [App\Http\Controllers\UserController::class, 'nonfiksi']);
