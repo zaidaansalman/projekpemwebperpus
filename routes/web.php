@@ -6,7 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 // Login page
@@ -67,15 +67,14 @@ Route::get('/data-sirkul', function () {
 });
 
 // Tambah Sirkulasi
-Route::get('/add-sirkul', function () {
-    $anggotas = \App\Models\Anggota::all();
-    $bukus = \App\Models\Buku::all();
-    return view('layouts.sirkul.add-sirkul', compact('anggotas', 'bukus'));
-});
+Route::get('/add-sirkul', [App\Http\Controllers\AdminController::class, 'showAddSirkulasi']);
 Route::post('/add-sirkul', [App\Http\Controllers\AdminController::class, 'storeSirkulasi'])->name('sirkulasi.store');
 
 // Kembalikan Sirkulasi
 Route::post('/kembalikan-sirkul/{id}', [App\Http\Controllers\AdminController::class, 'kembalikanSirkulasi'])->name('sirkulasi.kembalikan');
+
+// Perpanjang Sirkulasi
+Route::post('/perpanjang-sirkul/{id}', [App\Http\Controllers\AdminController::class, 'perpanjangSirkulasi'])->name('sirkulasi.perpanjang');
 
 // Log Pinjam
 Route::get('/log-pinjam', function () {

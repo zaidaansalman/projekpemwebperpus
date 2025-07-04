@@ -9,7 +9,7 @@
 		<li>
 			<a href="index.php">
 				<i class="fa fa-home"></i>
-				<b>Si Perpustakaan</b>
+				<b>perpusih</b>
 			</a>
 		</li>
 	</ol>
@@ -54,9 +54,12 @@
             @endif
         </td>
         <td>
-            <a href="" onclick="return confirm('Perpanjang Data Ini ?')" title="Perpanjang" class="btn btn-success">
-                <i class="glyphicon glyphicon-upload"></i>
-            </a>
+            <form action="{{ route('sirkulasi.perpanjang', $sirkul->id) }}" method="POST" style="display:inline;">
+                @csrf
+                <button type="submit" class="btn btn-success" onclick="return confirm('Perpanjang masa pinjam buku ini 7 hari lagi?')">
+                    <i class="glyphicon glyphicon-upload"></i>
+                </button>
+            </form>
             <form action="{{ route('sirkulasi.kembalikan', $sirkul->id) }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Kembalikan Buku Ini ?')">

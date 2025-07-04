@@ -178,28 +178,35 @@ class AdminController extends Controller
         return redirect('/data-pengguna')->with('success', 'Pengguna berhasil dihapus!');
     }
 
+    // Show the add-sirkul page (form peminjaman)
+    public function showAddSirkulasi()
+    {
+        $anggotas = \App\Models\Anggota::all();
+        $bukus = \App\Models\Buku::all();
+        return view('layouts.sirkul.add-sirkul', compact('anggotas', 'bukus'));
+    }
+
     // Store new sirkulasi
     public function storeSirkulasi(Request $request)
     {
         $validated = $request->validate([
             'id_anggota' => 'required|exists:anggotas,id',
-            'id_buku' => 'required|exists:books,id', // perbaikan di sini
+            'id_buku' => 'required|exists:books,id',
             'tgl_pinjam' => 'required|date',
+            'tgl_kembali' => 'required|date|after_or_equal:tgl_pinjam',
         ]);
 
-        $tgl_pinjam = $validated['tgl_pinjam'];
-        $tgl_kembali = Carbon::parse($tgl_pinjam)->addDays(7)->format('Y-m-d');
-        
-
+        // Hitung jatuh tempo otomatis (misal 7 hari setelah tgl_pinjam)
+        $jatuh_tempo = \Carbon\Carbon::parse($validated['tgl_pinjam'])->addDays(7);
 
         \App\Models\Sirkulasi::create([
-            //'jatuh_tempo' => $jatuh_tempo, // diisi otomatis
             'anggota_id' => $validated['id_anggota'],
             'buku_id' => $validated['id_buku'],
-            'tgl_pinjam' => $tgl_pinjam,
-            'tgl_kembali' => $tgl_kembali, // Tambahkan ini
+            'tgl_pinjam' => $validated['tgl_pinjam'],
+            'tgl_kembali' => $validated['tgl_kembali'],
+            'jatuh_tempo' => $jatuh_tempo,
             'status' => 'Dipinjam',
-            'denda' => 1000, // default denda
+            'denda' => 0,
         ]);
 
         return redirect('/data-sirkul')->with('success', 'Peminjaman berhasil ditambahkan!');
@@ -219,6 +226,18 @@ class AdminController extends Controller
         $sirkulasi->save();
 
         return redirect('/data-sirkul')->with('success', 'Buku berhasil dikembalikan!');
+    }
+
+    // Perpanjang sirkulasi (extend due date by 7 days)
+    public function perpanjangSirkulasi($id)
+    {
+        $sirkulasi = \App\Models\Sirkulasi::findOrFail($id);
+        if ($sirkulasi->status === 'Dipinjam') {
+            $sirkulasi->jatuh_tempo = \Carbon\Carbon::parse($sirkulasi->jatuh_tempo)->addDays(7);
+            $sirkulasi->save();
+            return redirect('/data-sirkul')->with('success', 'Masa pinjam berhasil diperpanjang 7 hari!');
+        }
+        return redirect('/data-sirkul')->with('error', 'Buku sudah dikembalikan, tidak bisa diperpanjang!');
     }
 
     // Dashboard

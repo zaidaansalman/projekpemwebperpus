@@ -60,7 +60,7 @@
           <main>
             <section class="hero" id="beranda">
               <div id="beranda">
-                <h1 id="Apotek" style="margin-left:24px;"><span style="text-decoration: underline">NF Library</span></h1>
+                <h1 id="Apotek" style="margin-left:24px;"><span style="text-decoration: underline">Perpusih</span></h1>
                 <p class="hero-subtitle" style="margin-left:55px; padding-left:0; text-align:left; text-decoration:none; font-weight:400; color:#fff;">Baca Buku Kesukaanmu Dimanapun dan Kapanpun!</p>
                 <br>
               </div>
@@ -89,9 +89,9 @@
 
             
             <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
-                <h2 style="text-align:left; font-weight:bold; text-decoration:underline;">NF Library </h2><br>
+                <h2 style="text-align:left; font-weight:bold; text-decoration:underline;">Perpusih </h2><br>
                 <blockquote style="text-align: left; font-size: 20px; font-weight: 400; line-height: 1.5; color: #333; font-family: 'Arial', sans-serif;">
-                NF Library adalah sebuah platform perpustakaan digital modern berbasis web yang dirancang untuk memudahkan akses online terhadap koleksi buku. Tujuannya adalah untuk mendukung budaya membaca di kalangan pelajar dan masyarakat umum melalui antarmuka yang ramah pengguna.
+               Perpusih adalah sebuah platform perpustakaan digital modern berbasis web yang dirancang untuk memudahkan akses online terhadap koleksi buku. Tujuannya adalah untuk mendukung budaya membaca di kalangan pelajar dan masyarakat umum melalui antarmuka yang ramah pengguna.
                 </blockquote>
             </div>
   
@@ -342,7 +342,7 @@
             <div class="container">
                 <h1 style="text-align: left; text-decoration: underline;">Tentang Kita</h1>
                 <p style="text-align: left; font-size: 20px; font-weight: 400; line-height: 1.5; color: #333; font-family: 'Arial', sans-serif; color: white; text-align: justify;">
-                NF Library adalah platform perpustakaan digital yang dikembangkan untuk mempermudah akses Mahasiswa terhadap koleksi buku dan literasi berbasis teknologi. Diaplikasi ini kami memberikan kemudahan bagi pengguna untuk membaca buku secara online, mencari koleksi buku yang diinginkan, dan mendapatkan rekomendasi buku sesuai minat. Dengan antarmuka yang sederhana dan intuitif, NF Library bertujuan untuk meningkatkan minat baca Mahasiswa, terutama di kalangan Mahasiswa.
+                Perpusih adalah platform perpustakaan digital yang dikembangkan untuk mempermudah akses Mahasiswa terhadap koleksi buku dan literasi berbasis teknologi. Diaplikasi ini kami memberikan kemudahan bagi pengguna untuk membaca buku secara online, mencari koleksi buku yang diinginkan, dan mendapatkan rekomendasi buku sesuai minat. Dengan antarmuka yang sederhana dan intuitif,  Perpusih bertujuan untuk meningkatkan minat baca Mahasiswa, terutama di kalangan Mahasiswa.
                 </p>
             </div>
         </div>

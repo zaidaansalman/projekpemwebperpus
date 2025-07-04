@@ -3,7 +3,7 @@
     <a href="index.php" class="logo">
         <span class="logo-lg">
             <img src="dist/img/logo.png" width="37px">
-            <b>E-Library</b>
+            <b>Perpusih</b>
         </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -23,7 +23,7 @@
                     <a class="dropdown-toggle">
                         <span>
                             <b>
-                                Sistem Informasi Perpustakaan Berbasis Web V 1.0
+                                perpustakaan digital
                             </b>
                         </span>
                     </a>
